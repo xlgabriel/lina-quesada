@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -24,7 +24,14 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Lina Quesada</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="icon" type="image/png" href="images/logo-lina-quesada.png" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -41,3 +48,32 @@
     -->
   </body>
 </html>
+<!-- style="background: radial-gradient(whitesmoke, #04060b);" -->
+<style>
+  body{
+    background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #161717, #030407);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #161717, #030407); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  } /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  /* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(63, 63, 63) #000;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(63, 63, 63);
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+</style>
