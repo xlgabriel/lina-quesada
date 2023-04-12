@@ -24,18 +24,34 @@ import {
 import { Link } from "react-router-dom";
 import CourseDetails from "./CourseDetails";
 import ReactWhatsapp from 'react-whatsapp';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { courseContent } from "./constCourses";
 
 const CoursesDetails = () => {
-  const [word, setWord] = useState("");
+  const [course, setCourse] = useState();
   const [stateDetails, setStateDetails] = useState(true);
-  const pasaword = (item) => {
+  const [message, setMessage] = useState('')
+  let location = useLocation();
+  const sendCourse = (item) => {
     setStateDetails(false);
     setTimeout(() => {
       setStateDetails(true);
-      setWord(item);
+      setCourse(item);
+      setMessage(`Hola. Me gustaría inscribirme al curso ${item.title}`)
     }, 100);
   };
+  useEffect(() => {
+    console.log('--inicio courses list--')
+    console.log(location.state.course)
+    console.log(course)
+    console.log('--fin courses list--')
+    const c = location.state.course !== null? location.state.course : courseContent[0]; 
+      // setCourse(location.state.course)
+      setCourse(c);
+      setMessage(`Hola. Me gustaría inscribirme al curso ${c.title}`)
+      console.log("hiiii"+c.title)
+  }, []);
 
   return (
     <Box
@@ -67,11 +83,11 @@ const CoursesDetails = () => {
           }}
         >
           <List>
-            {["1", "2", "3"].map((item, index) => (
+            {courseContent.map((item, index) => (
               <ListItem
                 key={index}
                 onClick={() => {
-                  pasaword(item);
+                  sendCourse(item);
                 }}
               >
                 <Paper
@@ -99,13 +115,13 @@ const CoursesDetails = () => {
                       component="div"
                       sx={{ fontSize: { sm: "16px", md: "20px" } }}
                     >
-                      Master Class {item}
+                      {item.title}
                     </Typography>
                     <Typography variant="body1" component="div">
-                      Personalizado
+                      {item.subtitle1}
                     </Typography>
                     <Typography variant="subtitle2" component="div">
-                      Microblanding Básico & Avanzado
+                      {item.subtitle2}
                     </Typography>
                   </CardContent>
                 </Paper>
@@ -132,9 +148,9 @@ const CoursesDetails = () => {
                 height: "",
               }}
             >
-              {stateDetails && <CourseDetails word={word}></CourseDetails>}
+              {stateDetails && <CourseDetails courseDetail={course}></CourseDetails>}
             </Box>
-            <Box
+            {stateDetails && <Box
               sx={{
                 position: "sticky",
                 bottom: 0,
@@ -143,11 +159,15 @@ const CoursesDetails = () => {
                 justifyContent: "center",
                 py:1
               }}
+              component={motion.div}
+              initial={{opacity:0}}
+              animate={{opacity:1}}
+              transition={{duration:1}}
             >
               <Button
                 variant="contained"
                 sx={{
-                  width:"30%",
+                  width:{xs:"100%", md:"30%"},
                   backgroundColor: "#efb603",
                   fontSize: "18px",
                   borderColor: "#000",
@@ -158,11 +178,13 @@ const CoursesDetails = () => {
                     color: "#000000",
                   },
                 }}
-                component={ReactWhatsapp} number="57-322-617-4846" message={`Me gustaría inscribirme al curso Mater Class ${word}`}
+                component={ReactWhatsapp} 
+                number="57-322-617-4846" 
+                message={message}
               >
                 Inscríbete Ahora
               </Button>
-            </Box>
+            </Box>}
           </Paper>
         </Grid>
       </Grid>

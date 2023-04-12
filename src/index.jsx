@@ -10,6 +10,7 @@ import App from "./App";
 import NavbarComponent from "./components/Navbar";
 import Courses from "./components/Courses/Courses";
 import CoursesDetails from "./components/Courses/CoursesList";
+import CoursesList from "./components/Courses/CoursesList";
 import Banner from "./components/mainPage/Banner";
 import Navbar from "./components/Navbar/NavbarDrawer";
 import Footer from "./components/mainPage/Footer";
@@ -29,7 +30,7 @@ root.render(
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/coursesD" element={<CoursesDetails />} />
+          <Route path="/coursesDetails" element={<CoursesList />} />
         </Routes>
       </Box>
         </Grid>

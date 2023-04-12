@@ -22,31 +22,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import { Pagination, Navigation, EffectCoverflow } from "swiper";
+import { courseCertification, studies } from "./aboutUsContants";
 
 const About = () => {
-  const items = [
-    {
-      title: "Nuestro Master Class",
-      content:
-        "Una Formación a un alto nivel de aprendizaje para lograr seguridad y profesionalismo a la hora de desempeñar este maravilloso arte. está diseñado de manera que todos puedan entenderlo, incluso aquellos sin conocimientos previos.",
-    },
-    {
-      title: "Nuestra certificación",
-      content:
-        "Acorde a mis estudios realizados durante estos últimos años con las mejores academias y artistas a nivel mundial.",
-    },
-    {
-      title: "Phiacademy",
-      content:
-        "Técnica avanzada e hiperrealismo phibrows en microblading. Sviatoslav Otchenash técnicas cómo Magic Shading, Soft Liner y Aquarelle lips.",
-    },
-    {
-      title:
-        "Me otorgan el título de Artista Royal de Colombia y nivel mundial.",
-      content:
-        "Por destacar mis habilidades en trazos perfectos, limpios, manejo de piel y protocolos completos para que el final del procedimiento sea impecable. Por ende, brindo capacitaciones a un alto nivel de aprendizaje.",
-    },
-  ];
+  
   return (
     <Container sx={{py:2}}>
       <Typography
@@ -76,12 +55,38 @@ const About = () => {
           gap={1}
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
-          {items.map((item) => (
+          {courseCertification.map((item) => (
             <Grid item xs={12} md={5}>
-              <Paper sx={{ minHeight: 200, my: {xs:1, md:2}, mx:"auto", width: {xs:"80%", md:"auto"}, backgroundColor:"#1d1f20", color:"white"}} component={motion.div} initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1, delay: 0.2}} whileHover={{scale:1.05, transition: {duration:0.5}}}>
+              <Paper sx={{ my: {xs:1, md:2}, mx:"auto", width: {xs:"80%", md:"auto"}, backgroundColor:"#1d1f20", color:"white"}} component={motion.div} initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1, delay: 0.2}} whileHover={{scale:1.05, transition: {duration:0.5}}}>
                 <Box sx={{p:2}}>
                 <Typography variant="h6" sx={{mb:2, color:"#efb810"}}>{item.title}</Typography>
                 <Typography variant="body1" sx={{color:"white"}}>{item.content}</Typography>
+                </Box>
+              </Paper>
+            </Grid>
+          ))}
+          <Grid item xs={12}>
+          <Typography
+        variant="h3"
+        sx={{ textAlign: "center", color: "white", my: 2, fontFamily: "Merriweather" }}
+        component={motion.div} initial={{y:-50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:1}}
+      >
+        Mis<span style={{color:"#efb810"}}> certificaciones</span>
+      </Typography>
+          </Grid>
+          {studies.map((item) => (
+            <Grid item xs={12} md={5}>
+              <Paper sx={{ my: {xs:1, md:2}, mx:"auto", width: {xs:"80%", md:"auto"}, backgroundColor:"#1d1f20", color:"white"}} component={motion.div} initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1, delay: 0.2}} whileHover={{scale:1.05, transition: {duration:0.5}}}>
+                <Box sx={{p:2}}>
+                  <Grid container>
+                  <Grid item xs={12} md={8}>
+                  <Typography variant="h6" sx={{mb:2, color:"#efb810"}}>{item.title}</Typography>
+                <Typography variant="body1" sx={{color:"white"}}>{item.content}</Typography>
+                  </Grid>
+                  <Grid item xs={12} md={4} sx={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+                    <img src={item.logo} alt="" width={60} style={{borderRadius:20}}/>
+                  </Grid>
+                  </Grid>
                 </Box>
               </Paper>
             </Grid>

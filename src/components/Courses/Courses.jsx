@@ -15,39 +15,12 @@ import Card from "@mui/joy/Card";
 import { Grid, Paper } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { courseContent } from "./constCourses";
 
 const Courses = () => {
-  const courses = [
-    {
-      title: "Master Class",
-      subtitle1: "Personalizado",
-      subtitle2: "Microblanding Básico & Avanzado",
-    },
-    {
-      title: "Master Class Micropigmentación",
-      subtitle1: "Personalizado",
-      subtitle2: "Técnicas: Efectos Powder Brows + Sombreado + Compacto",
-    },
-    {
-      title: "Master Class VIP en Cejas",
-      subtitle1: "Microblanding y micropigmentación",
-      subtitle2: "Técnicas: Pelo a pelo + Powder Brows + Hibrida y Compacto",
-    },
-    {
-      title: "Master Class",
-      subtitle1: "Perfeccionamiento en trazos microblanding",
-      subtitle2: "Técnicas hiper realistas",
-    },
-    {
-      title: "Master Class",
-      subtitle1: "Micro Lips",
-      subtitle2:
-        "Técnicas: Hidra-BBLips + neutralización + revitalización + full color",
-    },
-  ];
-
+  
   return (
-    <Container sx={{ backgroundColor: "", height: "" }}>
+    <Container sx={{ backgroundColor: "", height: "auto" }}>
       <Typography
         variant="h3"
         sx={{ color: "#efb810", fontFamily: "Merriweather", textAlign:"center" }}
@@ -60,17 +33,19 @@ const Courses = () => {
         exit={{ opacity: 0 }}
       >
         <Grid container spacing={2} sx={{ my: 2 }}>
-          {courses.map((item) => (
+          {courseContent.map((item,index) => (
             <Grid item xs={12} sm={6} md={4} lg={4}>
               <Paper
                 elevation={3}
                 sx={{
-                  height: 300,
+                  height: 330,
                   overflowX: "hidden",
                   display: "flex",
                   flexWrap: "wrap",
                   alignContent: "space-between",
                 }}
+                component={motion.div}
+                whileHover={{scale:1.05}}
               >
                 <CardMedia
                   component="img"
@@ -80,22 +55,25 @@ const Courses = () => {
                   loading="lazy"
                   alt="asf"
                 ></CardMedia>
-                <CardContent>
+                <CardContent sx={{width:"100%", textAlign:"center"}}>
                   <Typography variant="h6" sx={{ fontWeight: "600", fontFamily: "Merriweather" }}>
                     {item.title}
                   </Typography>
-                  <Typography variant="body1" sx={{fontFamily: "Merriweather"}}>
+                  <Typography variant="body1" sx={{fontFamily: "Merriweather", my:1}}>
                     {item.subtitle1}
+                  </Typography>
+                  <Typography variant="body2" sx={{fontFamily: "Merriweather"}}>
+                    {item.subtitle2}
                   </Typography>
                 </CardContent>
                 <Box sx={{ display: "flex", justifyContent: "center" }}></Box>
                 <Button
-                  key={`title+${1}`}
+                  key={`title+${index}`}
                   size="sm"
-                  color="primary"
                   aria-label="Explore Bahamas Islands"
-                  sx={{ ml: "auto", fontWeight: 600, width: "100%" }}
-                  to={"/coursesD"}
+                  sx={{ ml: "auto", fontWeight: 800, width: "100%", color:"black", "&:hover":{color:"#efb810"} }}
+                  to={"/coursesDetails"}
+                  state={{course:item}}
                   component={Link}
                 >
                   Ver más

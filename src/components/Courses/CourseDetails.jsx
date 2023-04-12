@@ -12,7 +12,7 @@ import {
   Divider,
   Grid,
   Button,
-  CardActions
+  CardActions,
 } from "@mui/material";
 
 import Timeline from "@mui/lab/Timeline";
@@ -24,15 +24,20 @@ import TimelineDot from "@mui/lab/TimelineDot";
 
 import SendIcon from "@mui/icons-material/Send";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { courseContent } from "./constCourses";
 
-const CourseDetails = ({ word }) => {
+const CourseDetails = ({ courseDetail = courseContent[0]}) => {
   const [expanded, setExpanded] = useState(false);
+  const [course, setCourse] = useState();
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+  useEffect(() => {
+    console.log("Holaaaaaaa")
+    console.log(courseDetail)
+  }, []);
 
   return (
     <Box
@@ -52,7 +57,7 @@ const CourseDetails = ({ word }) => {
             color: "#efb810",
           }}
         >
-          {courseContent.title}
+          {courseDetail.title}
         </Typography>
         <Typography
           variant="h4"
@@ -64,7 +69,7 @@ const CourseDetails = ({ word }) => {
             my: 2,
           }}
         >
-          Microblanding básico y avanzado
+          {courseDetail.subtitle1}
         </Typography>
         <Typography
           variant="h5"
@@ -75,10 +80,10 @@ const CourseDetails = ({ word }) => {
             color: "#efb810",
           }}
         >
-          Personalizado
+          {courseDetail.subtitle2}
         </Typography>
       </Box>
-      <Box sx={{my:2, display:"flex", justifyContent:"center"}}>
+      <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
         <img src="images/fondo-lina-quesada.png" alt="" width={300} />
       </Box>
       <Divider sx={{ width: "60%", mx: "auto", bgcolor: "black" }} />
@@ -92,11 +97,37 @@ const CourseDetails = ({ word }) => {
             color: "white",
           }}
         >
-          {courseContent.description}
+          {courseDetail.description}
         </Typography>
       </Box>
-      <Box sx={{my:2, display:"flex", justifyContent:"center"}}>
+      <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
         <img src="images/fondo-lina-quesada.png" alt="" width={300} />
+      </Box>
+      <Box sx={{ mt: 4 }}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: "Merriweather",
+            fontWeight: "bold",
+            textAlign: "center",
+            bgcolor: "black",
+            color: "#efb810",
+            py: 1,
+          }}
+        >
+          Técnicas
+        </Typography>
+        <List sx={{ px: 2 }}>
+          {courseDetail.techniques.map((item) => (
+            <ListItem>
+              <ListItemText
+                sx={{ color: "white" }}
+              >
+                <span style={{color:"#efb810"}}>{item.name} {item.description !== ''? ':':''} </span>{item.description}
+              </ListItemText>
+            </ListItem>
+          ))}
+        </List>
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography
@@ -113,7 +144,7 @@ const CourseDetails = ({ word }) => {
           Contenido del curso
         </Typography>
         <List sx={{ px: 2 }}>
-          {courseContent.content.map((item) => (
+          {courseDetail.content.map((item) => (
             <ListItem>
               <ListItemIcon>
                 <SendIcon sx={{ color: "#efb810" }} />
@@ -154,17 +185,17 @@ const CourseDetails = ({ word }) => {
                 color: "white",
               }}
             >
-              kit básico de bioseguridad
+              kit básico de bioseguridad (incluído)
             </Typography>
             <List sx={{ px: 2 }}>
-              {[1, 2].map((item) => (
+              {courseDetail.kits[0].map((item) => (
                 <ListItem>
                   <ListItemIcon>
                     <SendIcon sx={{ color: "#efb810" }} />
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
-                    primary="Delantal"
+                    primary={item}
                   ></ListItemText>
                 </ListItem>
               ))}
@@ -184,14 +215,14 @@ const CourseDetails = ({ word }) => {
               Kit profesional (si desea adquirirlo)
             </Typography>
             <List sx={{ px: 2 }}>
-              {[1, 2, 3].map((item) => (
+              {courseDetail.kits[1].map((item) => (
                 <ListItem>
                   <ListItemIcon>
                     <SendIcon sx={{ color: "#efb810" }} />
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
-                    primary="1 Tebori"
+                    primary={item}
                   ></ListItemText>
                 </ListItem>
               ))}
@@ -224,35 +255,10 @@ const CourseDetails = ({ word }) => {
             pt: 2,
           }}
         >
-          El curso tiene una duración de 3 días con horarios de 9 am a 5 pm.
+          El curso tiene una duración de <span style={{color:"#efb810"}}>{courseDetail.days.length} {courseDetail.days.length > 1? 'días':'día'}</span> con {courseDetail.days.length > 1? 'horarios':'horario'} de 9 am a 5 pm.
         </Typography>
-        {/* <Accordion
-          sx={{ px: 1, pt: 2 }}
-          expanded={expanded === "panel1"}
-          onChange={handleChange("panel1")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
-          >
-            <Typography
-              sx={{ width: "33%", fontWeight: "bold", color: "#efb810" }}
-            >
-              Día 1
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              eaque molestias et cum, minima saepe earum ducimus sequi ipsum
-              adipisci labore nemo? Nulla velit sequi odio ea in doloremque
-              odit.
-            </Typography>
-          </AccordionDetails>
-        </Accordion> */}
         <Timeline position="alternate" sx={{ py: 4 }}>
-          {courseContent.days.map((item, index) => (
+          {courseDetail.days.map((item, index) => (
             <TimelineItem>
               <TimelineSeparator>
                 <TimelineDot sx={{ bgcolor: "#efb810" }} />
@@ -288,6 +294,82 @@ const CourseDetails = ({ word }) => {
             </TimelineItem>
           ))}
         </Timeline>
+      </Box>
+      <Box sx={{backgroundColor: "#efb810"}}>
+      <Grid container sx={{py:1}}>
+        <Grid item xs={12} md={6}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: "Merriweather",
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "#000",
+            mb: 2,
+            py: 1,
+          }}
+        >
+          Valor
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{
+            fontFamily: "Merriweather",
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "#000",
+            mb: 2,
+            py: 1,
+          }}
+        >
+          {courseDetail.price.group !== ''? `Grupal: ${courseDetail.price.group}`: ''} {courseDetail.price.group !== '' && <br/>}
+          {courseDetail.price.personalized !== ''? `Personalizado: ${courseDetail.price.personalized}`: ''}
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            fontFamily: "Merriweather",
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "#000",
+            mb: 2,
+            py: 1,
+            px:1
+          }}
+        >
+          Separa tu cupo con $500.000. El valor restante lo pagas 3 días antes de iniciar el Master Class.
+        </Typography>
+        </Grid>
+        <Grid item xs={12} md={6}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: "Merriweather",
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "#000",
+            mb: 2,
+            py: 1,
+          }}
+        >
+          Medios de pago
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: "Merriweather",
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "#000",
+            mb: 2,
+            py: 1,
+          }}
+        >
+          <img src="images/logo-bancolombia.png" alt="" width={30} style={{marginRight:3}}/>
+          Bancolombia
+        </Typography>
+        </Grid>
+      </Grid>
       </Box>
     </Box>
   );
