@@ -29,6 +29,7 @@ const Banner = () => {
             initial={{ x: -900 }}
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
+            exit={{x:0}}
           >
             <Typography
               variant="h3"
@@ -100,6 +101,7 @@ const Banner = () => {
                 initial={{ x: 600 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 1 }}
+                exit={{x:0}}
                 sx={{
                   width: { xs: 300, md: 300 },
                   height: { xs: 500, md: 500 },

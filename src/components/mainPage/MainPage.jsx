@@ -7,7 +7,7 @@ import Contact from "./Contact";
 
 const MainPage = () => {
     return (
-        <Box sx={{backgroundColor:''}}>
+        <Box sx={{backgroundColor:'', overflow:"hidden"}}>
             <Grid>
                 <Grid xs="12" md="12"  id="#">
                     <Banner/>
