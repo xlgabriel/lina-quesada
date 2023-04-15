@@ -11,6 +11,8 @@ import {
 import { motion } from "framer-motion";
 
 const Testimonials = () => {
+  const goldColor = '#d3a737';
+  
   return (
     <Container sx={{ py: 2 }}>
       <Typography

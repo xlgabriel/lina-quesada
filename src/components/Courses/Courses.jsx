@@ -15,7 +15,8 @@ import {
   DialogActions,
   AppBar,
   Toolbar,
-  Slide
+  Slide,
+  Divider
 } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import ReactWhatsapp from "react-whatsapp";
@@ -28,6 +29,7 @@ import { courseContent } from "./constCourses";
 import CourseDetails from "./CourseDetails";
 
 const Courses = () => {
+  const goldColor = '#d3a737';
   const [course, setCourse] = useState();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -45,13 +47,27 @@ const Courses = () => {
       <Typography
         variant="h3"
         sx={{
-          color: "#efb810",
+          color: goldColor,
           fontFamily: "Merriweather",
           textAlign: "center",
         }}
       >
         Cursos
       </Typography>
+      <Divider
+        sx={{
+          backgroundColor: goldColor,
+          width: "40%",
+          height: 3,
+          mx: "auto",
+          my: 3,
+        }}
+        component={motion.div}
+        initial={{translateY:-90, opacity:0}}
+        whileInView={{translateY:0, opacity:1}}
+        transition={{duration:1}}
+        exit={{translateX:0}}
+      />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
@@ -188,7 +204,7 @@ const Courses = () => {
               variant="contained"
               sx={{
                 width: { xs: "100%", md: "30%" },
-                backgroundColor: "#efb603",
+                backgroundColor: goldColor,
                 fontSize: "18px",
                 borderColor: "#000",
                 color: "#000",

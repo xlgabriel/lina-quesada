@@ -29,6 +29,7 @@ import { motion } from "framer-motion";
 import { courseContent } from "./constCourses";
 
 const CourseDetails = ({ courseDetail = courseContent[0]}) => {
+  const goldColor = '#d3a737';
   const [expanded, setExpanded] = useState(false);
   const [course, setCourse] = useState();
   const handleChange = (panel) => (event, isExpanded) => {
@@ -54,7 +55,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             fontWeight: "bold",
             textAlign: "center",
             fontFamily: "Merriweather",
-            color: "#efb810",
+            color: goldColor,
             overflowWrap: "break-word",
             hyphens: "manual",
           }}
@@ -69,6 +70,8 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             fontFamily: "Merriweather",
             color: "white",
             my: 2,
+            overflowWrap: "break-word",
+            hyphens: "manual",
           }}
         >
           {courseDetail.subtitle1}
@@ -79,7 +82,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             fontWeight: "bold",
             textAlign: "center",
             fontFamily: "Merriweather",
-            color: "#efb810",
+            color: goldColor,
           }}
         >
           {courseDetail.subtitle2}
@@ -111,11 +114,17 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             pt: 1,
           }}
         >
-          El curso tiene una duración de <span style={{color:"#efb810"}}>{courseDetail.days.length} {courseDetail.days.length > 1? 'días':'día'}</span> con {courseDetail.days.length > 1? 'horarios':'horario'} de 9 am a 5 pm.
+          El curso tiene una duración de <span style={{color:goldColor}}>{courseDetail.days.length} {courseDetail.days.length > 1? 'días':'día'}</span> con {courseDetail.days.length > 1? 'horarios':'horario'} de 9 am a 5 pm.
         </Typography>
       </Box>
-      <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
-        <img src={courseDetail.photo} alt="" width={300} />
+      <Box sx={{ my: 6, display: "flex", justifyContent: "center"}}>
+      <Grid container sx={{justifyContent:"space-around"}}>
+        {courseDetail.photo.map((item)=>(
+           <Grid item xs={12} md={3}>
+           <img src={item} alt="" width={300} />
+         </Grid> 
+        ))}
+        </Grid>
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography
@@ -125,7 +134,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             fontWeight: "bold",
             textAlign: "center",
             bgcolor: "black",
-            color: "#efb810",
+            color: goldColor,
             py: 1,
           }}
         >
@@ -137,7 +146,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
               <ListItemText
                 sx={{ color: "white" }}
               >
-                <span style={{color:"#efb810"}}>{item.name} {item.description !== ''? ':':''} </span>{item.description}
+                <span style={{color:goldColor}}>{item.name} {item.description !== ''? ':':''} </span>{item.description}
               </ListItemText>
             </ListItem>
           ))}
@@ -151,7 +160,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             fontWeight: "bold",
             textAlign: "center",
             bgcolor: "black",
-            color: "#efb810",
+            color: goldColor,
             py: 1,
           }}
         >
@@ -161,7 +170,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
           {courseDetail.content.map((item) => (
             <ListItem>
               <ListItemIcon>
-                <SendIcon sx={{ color: "#efb810" }} />
+                <SendIcon sx={{ color: goldColor }} />
               </ListItemIcon>
               <ListItemText
                 sx={{ color: "white" }}
@@ -181,7 +190,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             textAlign: "center",
             mb: 2,
             bgcolor: "black",
-            color: "#efb810",
+            color: goldColor,
             py: 1,
           }}
         >
@@ -205,7 +214,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
               {courseDetail.kits[0].map((item) => (
                 <ListItem>
                   <ListItemIcon>
-                    <SendIcon sx={{ color: "#efb810" }} />
+                    <SendIcon sx={{ color: goldColor }} />
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
@@ -232,7 +241,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
               {courseDetail.kits.map((item) => (
                 <ListItem>
                   <ListItemIcon>
-                    <SendIcon sx={{ color: "#efb810" }} />
+                    <SendIcon sx={{ color: goldColor }} />
                   </ListItemIcon>
                   <ListItemText
                     sx={{ color: "white" }}
@@ -251,7 +260,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             fontFamily: "Merriweather",
             fontWeight: "bold",
             textAlign: "center",
-            color: "#efb810",
+            color: goldColor,
             mb: 2,
             py: 1,
           }}
@@ -269,13 +278,13 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             pt: 2,
           }}
         >
-          El curso tiene una duración de <span style={{color:"#efb810"}}>{courseDetail.days.length} {courseDetail.days.length > 1? 'días':'día'}</span> con {courseDetail.days.length > 1? 'horarios':'horario'} de 9 am a 5 pm.
+          El curso tiene una duración de <span style={{color:goldColor}}>{courseDetail.days.length} {courseDetail.days.length > 1? 'días':'día'}</span> con {courseDetail.days.length > 1? 'horarios':'horario'} de 9 am a 5 pm.
         </Typography>
         <Timeline position="alternate" sx={{ py: 4 }}>
           {courseDetail.days.map((item, index) => (
             <TimelineItem>
               <TimelineSeparator>
-                <TimelineDot sx={{ bgcolor: "#efb810" }} />
+                <TimelineDot sx={{ bgcolor: goldColor }} />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
@@ -284,7 +293,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
                   sx={{
                     fontFamiliy: "Merriweather",
                     fontWeight: "bold",
-                    color: "#efb810",
+                    color: goldColor,
                   }}
                 >
                   {`Día ${index + 1}`}
@@ -309,7 +318,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
           ))}
         </Timeline>
       </Box> */}
-      <Box sx={{backgroundColor: "#efb810"}}>
+      <Box sx={{backgroundColor: goldColor}}>
       <Grid container sx={{py:1}}>
         <Grid item xs={12} md={6}>
         <Typography

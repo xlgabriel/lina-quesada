@@ -24,6 +24,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const goldColor = '#d3a737';
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -189,7 +190,7 @@ const Contact = () => {
                     value="Send"
                     sx={{
                       width: "100%",
-                      backgroundColor: "#f99f00",
+                      backgroundColor: goldColor,
                       color: "#fff",
                       fontSize: "20px",
                       "&:hover": {
@@ -207,35 +208,35 @@ const Contact = () => {
           <Grid item xs={12} md={5}>
             <Box>
               <Box>
-                <Button sx={{ color: "#efb603", fontSize: "16px", textTransform:"none" }} href="mailto:email@gmail.com"
+                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="mailto:email@gmail.com"
                   target={"_blank"}>
                   <EmailIcon sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>email@gmail.com</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: "#efb603", fontSize: "16px", textTransform:"none" }} href="tel:+573226174846"
+                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="tel:+573226174846"
                   target={"_blank"}>
                   <PhoneAndroidIcon sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>3125719950</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: "#efb603", fontSize: "16px", textTransform:"none" }} href="https://www.facebook.com/lina.quesada.75"
+                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="https://www.facebook.com/lina.quesada.75"
                   target={"_blank"}>
                   <Facebook sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>Lina Quesada</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: "#efb603", fontSize: "16px", textTransform:"none" }} href="https://www.instagram.com/linaquesada/"
+                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="https://www.instagram.com/linaquesada/"
                   target={"_blank"}>
                   <Instagram sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>Lina Quesada</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: "#efb603", fontSize: "16px", textTransform:"none" }} component={ReactWhatsapp} number="57-322-617-4846" message="Hello World!!!">
+                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} component={ReactWhatsapp} number="57-322-617-4846" message="Hello World!!!">
                   <WhatsApp sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>3125719950</span>
                 </Button>
