@@ -34,7 +34,7 @@ const About = () => {
         sx={{ textAlign: "center", color: "white", mb: 2, fontFamily: "Merriweather" }}
         component={motion.div} initial={{y:-50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:1}}
       >
-        Sobre<span style={{color:goldColor}}> mí</span>
+        Sobre<span style={{color:'red'}}> mí</span>
       </Typography>
       <Divider
         sx={{
