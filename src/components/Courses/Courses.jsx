@@ -150,7 +150,7 @@ const Courses = () => {
           open={open}
           scroll="paper"
           onClose={() => handleClose()}
-          sx={{height:{xs:"auto",md:650}, my:{xs:0 ,md:4}, mx:{xs:0 ,md:4}, mt:{xs:5,md:4}}}
+          sx={{height:{xs:"auto",md:650}, my:{xs:0 ,md:4}, mx:{xs:0 ,md:10}, mt:{xs:5,md:4}}}
           fullScreen
         >
           <IconButton

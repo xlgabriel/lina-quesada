@@ -86,7 +86,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
         </Typography>
       </Box>
       <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
-        <img src="images/fondo-lina-quesada.png" alt="" width={300} />
+        <img src={courseDetail.photo} alt="" width={300} loading="lazy"/>
       </Box>
       <Divider sx={{ width: "60%", mx: "auto", bgcolor: "black" }} />
       <Box sx={{ px: 3, pt: 3 }}>
@@ -101,9 +101,21 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
         >
           {courseDetail.description}
         </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            fontFamily: "Merriweather",
+            fontWeight: "",
+            textAlign: "justify",
+            color: "white",
+            pt: 1,
+          }}
+        >
+          El curso tiene una duración de <span style={{color:"#efb810"}}>{courseDetail.days.length} {courseDetail.days.length > 1? 'días':'día'}</span> con {courseDetail.days.length > 1? 'horarios':'horario'} de 9 am a 5 pm.
+        </Typography>
       </Box>
       <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
-        <img src="images/fondo-lina-quesada.png" alt="" width={300} />
+        <img src={courseDetail.photo} alt="" width={300} />
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography
@@ -176,7 +188,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
           ¿Qué incluye el curso?
         </Typography>
         <Grid container>
-          <Grid item xs={12} md={6}>
+          {/* <Grid item xs={12} md={6}>
             <Typography
               variant="h6"
               sx={{
@@ -202,8 +214,8 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
                 </ListItem>
               ))}
             </List>
-          </Grid>
-          <Grid item xs={12} md={6}>
+          </Grid> */}
+          <Grid item xs={12} md={12}>
             <Typography
               variant="h6"
               sx={{
@@ -214,10 +226,10 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
                 color: "white",
               }}
             >
-              Kit profesional (si desea adquirirlo)
+              Kit profesional
             </Typography>
             <List sx={{ px: 2 }}>
-              {courseDetail.kits[1].map((item) => (
+              {courseDetail.kits.map((item) => (
                 <ListItem>
                   <ListItemIcon>
                     <SendIcon sx={{ color: "#efb810" }} />
@@ -232,7 +244,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{ bgcolor: "black" }}>
+      {/* <Box sx={{ bgcolor: "black" }}>
         <Typography
           variant="h5"
           sx={{
@@ -296,7 +308,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             </TimelineItem>
           ))}
         </Timeline>
-      </Box>
+      </Box> */}
       <Box sx={{backgroundColor: "#efb810"}}>
       <Grid container sx={{py:1}}>
         <Grid item xs={12} md={6}>
