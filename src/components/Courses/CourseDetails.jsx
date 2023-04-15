@@ -97,7 +97,7 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             color: "white",
           }}
         >
-          {courseDetail.description}
+          {courseDetail.description}-
         </Typography>
       </Box>
       <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
