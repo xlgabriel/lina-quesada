@@ -15,6 +15,8 @@ import ReactWhatsapp from 'react-whatsapp';
 
 const Banner = () => {
   // color:#bf930d
+  const goldColor = '#d3a737';
+  
   return (
     // <Box sx={{ py: 4, overflowY: "hidden", width: "100%" }}>
       <Container sx={{pt:3}}>
@@ -33,21 +35,21 @@ const Banner = () => {
           >
             <Typography
               variant="h3"
-              sx={{ color: "#efb810", fontFamily: "Merriweather" }}
+              sx={{ color: goldColor, fontFamily: "Merriweather"}}
             >
               Bienvenidos! Soy Lina Quesada, Artista Royal
             </Typography>
             <Typography variant="h6" sx={{ color: "white", my: 4, fontFamily: "Merriweather", textAlign:{xs:"justify"}}} >
               <p>
                 Somos especialistas en {""}
-                <span style={{ color: "#efb603" }}>
+                <span style={{ color: goldColor }}>
                   Micropigmentación y Microblading avanzado e hiperrealismo
                 </span>
                 . Teniendo el conocimiento y las habilidades para enseñar y
                 desempeñar este maravilloso arte.
               </p>
               <p>
-                Te invito a conocer nuestros cursos. <span style={{ color: "#efb603" }}>Inscríbete y aprende este
+                Te invito a conocer nuestros cursos. <span style={{ color: goldColor }}>Inscríbete y aprende este
                 hermoso arte.</span>
               </p>
             </Typography>
@@ -61,7 +63,7 @@ const Banner = () => {
               <Button
                 variant="contained"
                 sx={{
-                  backgroundColor: "#efb603",
+                  backgroundColor: goldColor,
                   fontSize: "20px",
                   borderColor: "#000",
                   color:"#000",

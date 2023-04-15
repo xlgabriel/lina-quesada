@@ -55,6 +55,8 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             textAlign: "center",
             fontFamily: "Merriweather",
             color: "#efb810",
+            overflowWrap: "break-word",
+            hyphens: "manual",
           }}
         >
           {courseDetail.title}

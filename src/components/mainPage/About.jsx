@@ -25,7 +25,8 @@ import { Pagination, Navigation, EffectCoverflow } from "swiper";
 import { courseCertification, studies } from "./aboutUsContants";
 
 const About = () => {
-  
+  const goldColor = '#d3a737';
+
   return (
     <Container sx={{py:2}}>
       <Typography
@@ -33,7 +34,7 @@ const About = () => {
         sx={{ textAlign: "center", color: "white", mb: 2, fontFamily: "Merriweather" }}
         component={motion.div} initial={{y:-50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:1}}
       >
-        Sobre<span style={{color:"#efb810"}}> mí</span>
+        Sobre<span style={{color:goldColor}}> mí</span>
       </Typography>
       <Divider
         sx={{
@@ -59,7 +60,7 @@ const About = () => {
             <Grid item xs={12} md={5}>
               <Paper sx={{ my: {xs:1, md:2}, mx:"auto", width: {xs:"80%", md:"auto"}, backgroundColor:"#1d1f20", color:"white"}} component={motion.div} initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1, delay: 0.2}} whileHover={{scale:1.05, transition: {duration:0.5}}}>
                 <Box sx={{p:2}}>
-                <Typography variant="h6" sx={{mb:2, color:"#efb810"}}>{item.title}</Typography>
+                <Typography variant="h6" sx={{mb:2, color:goldColor}}>{item.title}</Typography>
                 <Typography variant="body1" sx={{color:"white"}}>{item.content}</Typography>
                 </Box>
               </Paper>
@@ -71,7 +72,7 @@ const About = () => {
         sx={{ textAlign: "center", color: "white", my: 2, fontFamily: "Merriweather" }}
         component={motion.div} initial={{y:-50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:1}}
       >
-        Mis<span style={{color:"#efb810"}}> certificaciones</span>
+        Mis<span style={{color:goldColor}}> certificaciones</span>
       </Typography>
           </Grid>
           {studies.map((item) => (
@@ -80,7 +81,7 @@ const About = () => {
                 <Box sx={{p:2}}>
                   <Grid container>
                   <Grid item xs={12} md={8}>
-                  <Typography variant="h6" sx={{mb:2, color:"#efb810"}}>{item.title}</Typography>
+                  <Typography variant="h6" sx={{mb:2, color:goldColor}}>{item.title}</Typography>
                 <Typography variant="body1" sx={{color:"white"}}>{item.content}</Typography>
                   </Grid>
                   <Grid item xs={12} md={4} sx={{display:"flex", alignItems:"center", justifyContent:"center"}}>
