@@ -91,15 +91,17 @@ const Courses = () => {
                   display: "flex",
                   flexWrap: "wrap",
                   alignContent: "space-between",
+                  cursor:"pointer"
                 }}
                 component={motion.div}
                 whileHover={{ scale: 1.05 }}
+                onClick={()=>openDrawer(item)}
               >
                 <CardMedia
                   component="img"
                   sx={{ height: "150px", backgroundSize: "contain" }}
-                  src="images/logo-lina-quesada.png"
-                  srcSet="images/logo-lina-quesada.png 2x"
+                  src={item.photo}
+                  srcSet={`${item.photo} 2x`}
                   loading="lazy"
                   alt="asf"
                 ></CardMedia>

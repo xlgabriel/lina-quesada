@@ -9,7 +9,8 @@ const courseContent =
             title: 'Master Class VIP en Cejas',
             subtitle1: 'Microblanding básico y avanzado',
             subtitle2: "Presencial Grupal / Personalizado",
-            photo: ['images/microblanding-3.jpg','images/microblanding-7.jpeg',],
+            photo: 'images/microblanding-7.jpeg',
+            photos: ['images/microblanding-3.jpg','images/microblanding-7.jpeg',],
             description: "Aprenderás con nosotros la técnica más novedosa del mundo, al realizar trazos manuales simulando vellos naturales a través de la implantación de pigmentos.",
             techniques: [
                 {
@@ -52,7 +53,8 @@ const courseContent =
             title: 'Master Class Perfeccionamiento en Trazos Microblanding',
             subtitle1: 'Presencial Personalizado',
             subtitle2: "",
-            photo: ['images/microblanding-1.jpeg','images/microblanding-7.jpeg'],
+            photo: 'images/microblanding-7.jpeg',
+            photos: ['images/microblanding-1.jpeg','images/microblanding-6.jpg'],
             description: "En este curso podrás adquirir habilidades mas avanzadas en estructuras y trazos con mas realismo y naturalidad que te llevaran a un nivel superior. Estamos convencidos de que la excelencia es la base fundamental para el éxito de un profesional del Microblading. Para participar en el máster debe tener conocimientos en microblanding.",
             techniques: [
                 {
@@ -80,7 +82,8 @@ const courseContent =
             title: 'Master Class Micro Lips',
             subtitle1: 'Micropigmentación en labios',
             subtitle2: "Presencial Grupal / Personalizado",
-            photo: ['images/microlips-1.jpg','images/microlips-2.jpg'],
+            photo: 'images/microlips-2.jpg',
+            photos: ['images/microlips-1.jpg','images/microlips-2.jpg'],
             description: "La Micropigmentación en labios permite embellecer el rostro con las técnicas más novedosas que están actualmente. A través de la implantación de un tono adecuado al fototipo del color de labio y mejorando la simetría de ellos. Aprenderás para que necesidad están las técnicas",
             techniques: [
                 {
@@ -123,7 +126,8 @@ const courseContent =
             title: 'Master Class VIP',
             subtitle1: 'Micropingmentación Cejas & Labios',
             subtitle2: "Presencial Grupal / Personalizado",
-            photo: ['images/microblanding-1.jpeg','images/microlips-1.jpg'],
+            photo: 'images/masterclassvip.png',
+            photos: ['images/microblanding-1.jpeg','images/microlips-2.jpg'],
             description: "Este Master Class VIP reune nuestros cursos Master Class VIP en Cejas y Master Class Micro Lips.",
             techniques: [
                 {

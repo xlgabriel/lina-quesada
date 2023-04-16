@@ -38,6 +38,7 @@ export default function Navbar() {
   const navigateF = (item) => {
     navigate("/"+item.path);
     setTimeout(() => {
+      setOpen(false)
       window.location.href = item.path;
     }, 500);
   }

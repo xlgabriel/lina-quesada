@@ -6,16 +6,24 @@ import {
   ListItemText,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function NavListDrawer({ onClick, navLinks }) {
+  const navigate = useNavigate();
+  const navigateD = (path) => {
+    navigate("/"+path);
+    setTimeout(() => {
+      window.location.href = path;
+    }, 500);
+  }
+
   return (
     <Box sx={{ width: 250 }} onClick={onClick}>
       <nav aria-label="main mailbox folders">
         <List>
           {navLinks.map((item) => (
             <ListItem disablePadding key={item.title}>
-              <ListItemButton href={item.path} component="a">
+              <ListItemButton onClick={()=>navigateD(item.path)}>
                 {/* <ListItemIcon>{item.icon}</ListItemIcon> */}
                 <ListItemText primary={item.title} />
               </ListItemButton>

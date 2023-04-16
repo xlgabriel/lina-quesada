@@ -28,16 +28,16 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { courseContent } from "./constCourses";
 
-const CourseDetails = ({ courseDetail = courseContent[0]}) => {
-  const goldColor = '#d3a737';
+const CourseDetails = ({ courseDetail = courseContent[0] }) => {
+  const goldColor = "#d3a737";
   const [expanded, setExpanded] = useState(false);
   const [course, setCourse] = useState();
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
   useEffect(() => {
-    console.log("Holaaaaaaa")
-    console.log(courseDetail)
+    console.log("Holaaaaaaa");
+    console.log(courseDetail);
   }, []);
 
   return (
@@ -88,8 +88,24 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
           {courseDetail.subtitle2}
         </Typography>
       </Box>
-      <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
-        <img src={courseDetail.photo} alt="" width={300} loading="lazy"/>
+      {/* <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
+        <img src={courseDetail.photo} alt="" width={300} loading="lazy" />
+      </Box> */}
+      <Box sx={{ my: 6, display: "flex", justifyContent: "center" }}>
+        <Grid
+          container
+          sx={{
+            justifyContent: { xs: "center", md: "space-around" },
+            textAlign: "center",
+          }}
+          gap={0.5}
+        >
+          {courseDetail.photos.map((item) => (
+            <Grid item xs={12} md={3}>
+              <img src={item} alt="" width={300} />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
       <Divider sx={{ width: "60%", mx: "auto", bgcolor: "black" }} />
       <Box sx={{ px: 3, pt: 3 }}>
@@ -111,20 +127,17 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
             fontWeight: "",
             textAlign: "justify",
             color: "white",
-            pt: 1,
+            pt: 1.5,
           }}
         >
-          El curso tiene una duración de <span style={{color:goldColor}}>{courseDetail.days.length} {courseDetail.days.length > 1? 'días':'día'}</span> con {courseDetail.days.length > 1? 'horarios':'horario'} de 9 am a 5 pm.
+          El curso tiene una duración de{" "}
+          <span style={{ color: goldColor }}>
+            {courseDetail.days.length}{" "}
+            {courseDetail.days.length > 1 ? "días" : "día"}
+          </span>{" "}
+          con {courseDetail.days.length > 1 ? "horarios" : "horario"} de 9 am a
+          5 pm.
         </Typography>
-      </Box>
-      <Box sx={{ my: 6, display: "flex", justifyContent: "center"}}>
-      <Grid container sx={{justifyContent:"space-around"}}>
-        {courseDetail.photo.map((item)=>(
-           <Grid item xs={12} md={3}>
-           <img src={item} alt="" width={300} />
-         </Grid> 
-        ))}
-        </Grid>
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography
@@ -143,10 +156,11 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
         <List sx={{ px: 2 }}>
           {courseDetail.techniques.map((item) => (
             <ListItem>
-              <ListItemText
-                sx={{ color: "white" }}
-              >
-                <span style={{color:goldColor}}>{item.name} {item.description !== ''? ':':''} </span>{item.description}
+              <ListItemText sx={{ color: "white" }}>
+                <span style={{ color: goldColor }}>
+                  {item.name} {item.description !== "" ? ":" : ""}{" "}
+                </span>
+                {item.description}
               </ListItemText>
             </ListItem>
           ))}
@@ -318,81 +332,94 @@ const CourseDetails = ({ courseDetail = courseContent[0]}) => {
           ))}
         </Timeline>
       </Box> */}
-      <Box sx={{backgroundColor: goldColor}}>
-      <Grid container sx={{py:1}}>
-        <Grid item xs={12} md={6}>
-        <Typography
-          variant="h5"
-          sx={{
-            fontFamily: "Merriweather",
-            fontWeight: "bold",
-            textAlign: "center",
-            color: "#000",
-            mb: 2,
-            py: 1,
-          }}
-        >
-          Valor
-        </Typography>
-        <Typography
-          variant="h6"
-          sx={{
-            fontFamily: "Merriweather",
-            fontWeight: "bold",
-            textAlign: "center",
-            color: "#000",
-            mb: 2,
-            py: 1,
-          }}
-        >
-          {courseDetail.price.group !== ''? `Grupal: ${courseDetail.price.group}`: ''} {courseDetail.price.group !== '' && <br/>}
-          {courseDetail.price.personalized !== ''? `Personalizado: ${courseDetail.price.personalized}`: ''}
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          sx={{
-            fontFamily: "Merriweather",
-            fontWeight: "bold",
-            textAlign: "center",
-            color: "#000",
-            mb: 2,
-            py: 1,
-            px:1
-          }}
-        >
-          Separa tu cupo con $500.000. El valor restante lo pagas 3 días antes de iniciar el Master Class.
-        </Typography>
+      <Box sx={{ backgroundColor: goldColor }}>
+        <Grid container sx={{ py: 1 }}>
+          <Grid item xs={12} md={6}>
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+                textAlign: "center",
+                color: "#000",
+                mb: 2,
+                py: 1,
+                textDecoration:"underline",
+              }}
+            >
+              Valor
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+                textAlign: "center",
+                color: "#000",
+                mb: 2,
+                py: 1,
+              }}
+            >
+              {courseDetail.price.group !== ""
+                ? `Grupal: ${courseDetail.price.group}`
+                : ""}{" "}
+              {courseDetail.price.group !== "" && <br />}
+              {courseDetail.price.personalized !== ""
+                ? `Personalizado: ${courseDetail.price.personalized}`
+                : ""}
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+                textAlign: "center",
+                color: "#000",
+                mb: 2,
+                py: 1,
+                px: 1,
+              }}
+            >
+              Separa tu cupo con $500.000. El valor restante lo pagas 3 días
+              antes de iniciar el Master Class.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+                textAlign: "center",
+                color: "#000",
+                mb: 2,
+                py: 1,
+                textDecoration:"underline",
+              }}
+            >
+              Medios de pago
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: "Merriweather",
+                fontWeight: "bold",
+                textAlign: "center",
+                color: "#000",
+                mb: 2,
+                py: 1,
+              }}
+            >
+              <img
+                src="images/logo-bancolombia.png"
+                alt=""
+                width={30}
+                style={{ marginRight: 3 }}
+              />
+              Bancolombia
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={12} md={6}>
-        <Typography
-          variant="h5"
-          sx={{
-            fontFamily: "Merriweather",
-            fontWeight: "bold",
-            textAlign: "center",
-            color: "#000",
-            mb: 2,
-            py: 1,
-          }}
-        >
-          Medios de pago
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{
-            fontFamily: "Merriweather",
-            fontWeight: "bold",
-            textAlign: "center",
-            color: "#000",
-            mb: 2,
-            py: 1,
-          }}
-        >
-          <img src="images/logo-bancolombia.png" alt="" width={30} style={{marginRight:3}}/>
-          Bancolombia
-        </Typography>
-        </Grid>
-      </Grid>
       </Box>
     </Box>
   );
