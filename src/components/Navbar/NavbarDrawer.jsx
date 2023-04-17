@@ -167,7 +167,7 @@ export default function Navbar() {
               edge="start"
               aria-label="menu"
               onClick={() => setOpen(true)}
-              sx={{ display: { xs: "block", lg: "none" } }}
+              sx={{ display: { xs: "block", lg: "none" }, flexGrow:1, }}
             >
               <MenuIcon />
             </IconButton>

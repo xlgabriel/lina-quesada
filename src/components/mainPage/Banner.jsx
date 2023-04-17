@@ -110,7 +110,7 @@ const Banner = () => {
                 }}
               >
                 <img
-                  src="images/fondo-lina-quesada.png"
+                  src="images/foto-banner-1-removebg.png"
                   alt=""
                   width="100%"
                   component={motion.div}
