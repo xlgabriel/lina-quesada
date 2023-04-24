@@ -211,18 +211,18 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
           ¿Qué incluye el curso?
         </Typography>
         <Grid container>
-          {/* <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6}>
             <Typography
               variant="h6"
               sx={{
                 fontFamily: "Merriweather",
                 fontWeight: "",
-                textAlign: "justify",
+                textAlign: "",
                 px: 3,
                 color: "white",
               }}
             >
-              kit básico de bioseguridad (incluído)
+              Kit profesional
             </Typography>
             <List sx={{ px: 2 }}>
               {courseDetail.kits[0].map((item) => (
@@ -237,22 +237,22 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
                 </ListItem>
               ))}
             </List>
-          </Grid> */}
-          <Grid item xs={12} md={12}>
+          </Grid>
+          <Grid item xs={12} md={6}>
             <Typography
               variant="h6"
               sx={{
                 fontFamily: "Merriweather",
                 fontWeight: "",
-                textAlign: "",
+                textAlign: "justify",
                 px: 3,
                 color: "white",
               }}
             >
-              Kit profesional
+              kit básico de bioseguridad
             </Typography>
             <List sx={{ px: 2 }}>
-              {courseDetail.kits.map((item) => (
+              {courseDetail.kits[1].map((item) => (
                 <ListItem>
                   <ListItemIcon>
                     <SendIcon sx={{ color: goldColor }} />

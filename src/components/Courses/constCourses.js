@@ -7,10 +7,10 @@ const courseContent =
     [
         {
             title: 'Master Class VIP en Cejas',
-            subtitle1: 'Microblanding básico y avanzado',
+            subtitle1: 'Microblanding y Micropigmentación',
             subtitle2: "Presencial Grupal / Personalizado",
-            photo: 'images/microblanding-7.jpeg',
-            photos: ['images/microblanding-3.jpg','images/microblanding-7.jpeg',],
+            photo: 'images/microblanding-1.jpeg',
+            photos: ['images/microblanding-1.jpeg', 'images/microblanding-6.jpg',],
             description: "Aprenderás con nosotros la técnica más novedosa del mundo, al realizar trazos manuales simulando vellos naturales a través de la implantación de pigmentos.",
             techniques: [
                 {
@@ -30,12 +30,16 @@ const courseContent =
                     description: 'Una técnica de mayor realce y definición al contorno de las cejas, también es una alternativa para realizar en procedimiento anterior como tatuajes o micropigmentación Te enseño a clasificar en diseño, color y técnica apropiada para esos casos.'
                 },
             ],
-            content: ['Introducción en microblanding Visagismo', "Diseño de cejas y clasificación de espinas", "Conocimiento de la piel", "Profundidad y presición.", "Indicaciones y contraindicaciones",
+            content: ['Introducción en microblanding', "Visagismo, diseño de cejas y clasificación de espinas", "Conocimiento de la piel", "Profundidad y presición.", "Indicaciones y contraindicaciones",
                 "Historía clínica", "Bioseguridad", "Anestesia", "Cuidados post tratamiento", "Protocolo completo para realizar el procedimiento de cejas desde el inicio hasta el final",
-                "Cómo realizar un retoque", "Manejo del inductor", "Trazos pelo a pelo en técnicas básicas y avanzadas", "Práctica en piel sintética", "Práctica en modelo real en compañía del máster",
-                "Colorimetría", "Manejo de la fotografía y redes sociales", "Proveedores", "Apoyo continuo por 6 meses vía WhatsApp", "Certificado"],
-            kits: ["Delantal", "Protector para el cabello", "1 Tebori", "10 Agujas", "1 Pigmento Profesional", "2 Piel Sintética", "1 Regla calibradora pie de Rey", "1 Regla compás",
-                "1 Lápiz de cera", "1 Anestesia en crema", "Cartilla de aprendizaje", "Bloc de notas", "Certificado"],
+                "Cómo realizar un retoque", "Manejo de equipos", "Técnicas de trazos pelo a pelo, básicas y avanzadas", "Técnicas de Micropingmentación Powder Brows, híbrida y compacto", 
+                "Práctica en piel sintética", "Práctica en modelo real en compañía del máster", "Colorimetría", "Manejo de la fotografía y redes sociales", "Proveedores"],
+            kits: [
+                ["1 Inductor", "10 Agujas microblanding", "1 Dermógrago", "10 Agujas para dermógrafo", "1 Kit de 3 pigmentos", "2 Piel Sintética", 
+                "1 Regla calibradora pie de Rey", "1 Regla compás","1 Lápiz de cera", "1 Anestesia en crema", "Cartilla de aprendizaje", "Bloc de notas", "Certificado",
+                "Acompañamiento durante 6 meses vía WhatsApp"],
+                ["Delantal", "Protector para el cabello",]
+            ],
             days: [
 
                 ['Introducción al microblanding.', 'Visagismo', 'Diseño de cejas, Anatomía, y clasificación de espinas.', 'Conocimiento de la piel, profundidad y precisión.',
@@ -53,8 +57,8 @@ const courseContent =
             title: 'Master Class Perfeccionamiento en Trazos Microblanding',
             subtitle1: 'Presencial Personalizado',
             subtitle2: "",
-            photo: 'images/microblanding-7.jpeg',
-            photos: ['images/microblanding-1.jpeg','images/microblanding-6.jpg'],
+            photo: 'images/curso-personalizado.jpeg',
+            photos: ['images/curso-personalizado.jpeg', 'images/microblanding-5.jpg'],
             description: "En este curso podrás adquirir habilidades mas avanzadas en estructuras y trazos con mas realismo y naturalidad que te llevaran a un nivel superior. Estamos convencidos de que la excelencia es la base fundamental para el éxito de un profesional del Microblading. Para participar en el máster debe tener conocimientos en microblanding.",
             techniques: [
                 {
@@ -65,12 +69,13 @@ const courseContent =
             content: ['Remotamos diseño de cejas.', 'Anatomía de las cejas.', 'Clasificación de espinas.', 'Trazos hiperrealismo: Inicios y espinas.', 'Tipos de calibre de agujas.',
                 'Protocolo completo para realizar el procedimiento.', 'Práctica en piel sintética.', 'Demostración en modelo real.', 'Certificado'],
             kits:
-
-                ["Delantal", "Protector para el cabello", "1 Tebori", "10 Agujas", "1 Pigmento Profesional", "2 Piel Sintética", "1 Regla calibradora pie de Rey", "1 Regla compás",
-                    "1 Lápiz de cera", "1 Anestesia en crema", "Cartilla de aprendizaje", "Bloc de notas", "Certificado"],
-
+                [
+                    ["1 Tebori", "10 Agujas", "1 Pigmento Profesional", "2 Piel Sintética", "1 Regla calibradora pie de Rey", "1 Regla compás",
+                        "1 Lápiz de cera", "1 Anestesia en crema", "Cartilla de aprendizaje", "Bloc de notas", "Certificado"],
+                    ["Delantal", "Protector para el cabello",]
+                ],
             days: [
-                ['Remotamos diseño de cejas.', 'Anatomía de las cejas.', 'Clasificación de espinas.', 'Trazos hiperrealismo: Inicios y espinas.', 'Tipos de calibre de agujas.',
+                ['Retomamos diseño de cejas.', 'Anatomía de las cejas.', 'Clasificación de espinas.', 'Trazos hiperrealismo: Inicios y espinas.', 'Tipos de calibre de agujas.',
                     'Protocolo completo para realizar el procedimiento.', 'Práctica en piel sintética.', 'Demostración en modelo real.', 'Certificado'],
             ],
             price: {
@@ -83,7 +88,7 @@ const courseContent =
             subtitle1: 'Micropigmentación en labios',
             subtitle2: "Presencial Grupal / Personalizado",
             photo: 'images/microlips-2.jpg',
-            photos: ['images/microlips-1.jpg','images/microlips-2.jpg'],
+            photos: ['images/microlips-1.jpg', 'images/microlips-2.jpg'],
             description: "La Micropigmentación en labios permite embellecer el rostro con las técnicas más novedosas que están actualmente. A través de la implantación de un tono adecuado al fototipo del color de labio y mejorando la simetría de ellos. Aprenderás para que necesidad están las técnicas",
             techniques: [
                 {
@@ -103,12 +108,14 @@ const courseContent =
                     description: ''
                 },
             ],
-            content: ['Conocimiento de la Micropigmentación.', 'Diseño de labios y sus partes.', 'Indicaciones y contraindicaciones.', 'Conocimiento de piel.', 'Profundidad de la piel.', 'Cuidados Pre Pos Tratamientos.',
+            content: ['Conocimiento de la Micropigmentación.', 'Diseño de labios y sus partes.', 'Indicaciones y contraindicaciones.', 'Conocimiento de piel.', 'Profundidad de la piel.', 'Cuidados Pre-Pos Tratamientos.',
                 'Historia clínica', 'Manejo de la anestesia.', 'Manejo del Dermógrafo y Dermapen', 'Manejo de cada técnica: Hidra BB Lips, neutralización, revitalización y full color.', 'Protocolo completo al procedimiento.',
-                'Colorimetría', 'Bioseguridad', 'Manejo de fotografía.', 'Proveedores.', 'Práctica en piel sintética.', 'Práctica en modelo real en compañía de la Master.', 'Acompañamiento durante 6 meses vía WhatsApp.', 'Certificado.'],
+                'Colorimetría', 'Bioseguridad', 'Manejo de fotografía.', 'Proveedores.', 'Práctica en piel sintética.', 'Práctica en modelo real en compañía de la Master.'],
             kits:
-                ["Delantal", "Protector para el cabello", "1 dermógrafo", "10 agujas", "3 pigmentos", "1 vial de ácido hialuronico en hidratación.", "1 lápiz blanco", "1 piel sintética", "1 libro de la técnica.", "1 anestesia"],
-
+                [
+                    ["1 Dermógrafo", "10 agujas para dermógrafo", "3 pigmentos", "1 vial de ácido hialuronico en hidratación.", "1 lápiz blanco", "1 piel sintética", "1 libro de la técnica.", "1 anestesia", 'Acompañamiento durante 6 meses vía WhatsApp.', 'Certificado.'],
+                    ["Delantal", "Protector para el cabello",]
+                ],
             days: [
 
                 ['Introducción en la micropigmentación.', 'Diseño de labios y sus partes.', 'Conocimiento de piel.', 'Conocimiento de la piel, profundidad y precisión',
@@ -127,7 +134,7 @@ const courseContent =
             subtitle1: 'Micropingmentación Cejas & Labios',
             subtitle2: "Presencial Grupal / Personalizado",
             photo: 'images/masterclassvip.png',
-            photos: ['images/microblanding-1.jpeg','images/microlips-2.jpg'],
+            photos: ['images/microblanding-1.jpeg', 'images/microlips-2.jpg'],
             description: "Este Master Class VIP reune nuestros cursos Master Class VIP en Cejas y Master Class Micro Lips.",
             techniques: [
                 {
@@ -139,11 +146,14 @@ const courseContent =
                     description: 'Hidra BB-Lips con Hialurónico, Neutralización, Revitalización, Full color.'
                 },
             ],
-            content: ['Certificado', 'Acompañamiento durante 6 meses vía Whatsapp.'],
+            content: [],
             kits:
-                ["Delantal", "Protector para el cabello", "1 dermógrado + 20 agujas", "1 inductor", "10 agujas microblanding.", '3 pigmentos profesionales para cejas.', '3 pigmentos para labios.', '1 vial de ácido hialurónico en hidratación.',
-                    '4 pieles sintéticas.', '1 regla pie de rey.', '1 regla compás.', '1 lápiz de cera para cejas.', '1 lápiz para labios.', '1 anestesia en crema.', '1 cartilla de aprendizaje de cejas y labios.',
-                    '1 block de notas.'],
+                [
+                    ["1 dermógrado + 20 agujas", "1 inductor", "10 agujas microblanding.", '3 pigmentos profesionales para cejas.', '3 pigmentos para labios.', '1 vial de ácido hialurónico en hidratación.',
+                        '4 pieles sintéticas.', '1 regla pie de rey.', '1 regla compás.', '1 lápiz de cera para cejas.', '1 lápiz para labios.', '1 anestesia en crema.', '1 cartilla de aprendizaje de cejas y labios.',
+                        '1 block de notas.', 'Certificado', 'Acompañamiento durante 6 meses vía Whatsapp.'],
+                    ["Delantal", "Protector para el cabello",]
+                ],
             days: [
 
                 ['Introducción al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
@@ -152,9 +162,9 @@ const courseContent =
                     'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
                 ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
                     'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
-                    ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
+                ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
                     'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
-                    ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
+                ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
                     'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
             ],
             price: {

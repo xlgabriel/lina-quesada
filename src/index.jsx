@@ -16,7 +16,7 @@ import Navbar from "./components/Navbar/NavbarDrawer";
 import Footer from "./components/mainPage/Footer";
 // import reportWebVitals from './reportWebVitals';
 import { AnimatePresence } from "framer-motion";
-import { Box,Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import MainPage from "./components/mainPage/MainPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -26,16 +26,16 @@ root.render(
       <Navbar></Navbar>
       <Grid>
         <Grid item xs={12} md={12}>
-        <Box sx={{ pt: 12, backgroundColor:'' }}>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/coursesDetails" element={<CoursesList />} />
-        </Routes>
-      </Box>
+          <Box sx={{ pt: 12, backgroundColor: "" }}>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/courses" element={<Courses />} />
+              <Route path="/coursesDetails" element={<CoursesList />} />
+            </Routes>
+          </Box>
         </Grid>
         <Grid item xs={12} md={12}>
-        <Footer/>
+          <Footer />
         </Grid>
       </Grid>
     </AnimatePresence>
