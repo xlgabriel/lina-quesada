@@ -1,25 +1,22 @@
+import Facebook from "@mui/icons-material/Facebook";
+import Instragram from "@mui/icons-material/Instagram";
+import MenuIcon from "@mui/icons-material/Menu";
+import WhatsApp from "@mui/icons-material/WhatsApp";
 import {
   AppBar,
-  Button,
-  Drawer,
+  Button, Container, Drawer,
   IconButton,
   Toolbar,
   Typography,
-  Container,
+  Box
 } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import NavListDrawerResponsive from "./NavListDrawer";
-import { Box } from "@mui/system";
-import Courses from "../Courses/Courses";
-import Facebook from "@mui/icons-material/Facebook";
-import Instragram from "@mui/icons-material/Instagram";
-import WhatsApp from "@mui/icons-material/WhatsApp";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactWhatsapp from "react-whatsapp";
-import { motion } from "framer-motion";
 // import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+
 const navLinks = [
   { title: "Inicio", path: "#" },
   { title: "Acerca", path: "#about" },

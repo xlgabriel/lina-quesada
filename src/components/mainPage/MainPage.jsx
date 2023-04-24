@@ -1,9 +1,11 @@
-import { Grid } from "@mui/material";
-import { Box } from "@mui/system";
-import Banner from "./Banner";
+//Liberias
+import { Box, Grid } from "@mui/material";
+
+//Componentes
 import About from "./About";
-import Testimonials from "./Testimonials";
+import Banner from "./Banner";
 import Contact from "./Contact";
+import Testimonials from "./Testimonials";
 
 const MainPage = () => {
     return (

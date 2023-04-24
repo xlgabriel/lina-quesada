@@ -1,30 +1,29 @@
-import * as React from "react";
+import emailjs from "@emailjs/browser";
+import EmailIcon from "@mui/icons-material/Email";
+import Facebook from "@mui/icons-material/Facebook";
+import Instagram from "@mui/icons-material/Instagram";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import WhatsApp from "@mui/icons-material/WhatsApp";
 import {
   Alert,
   Box,
   Button,
   Card,
   Container,
+  Divider,
   Grid,
   Snackbar,
   TextField,
   Typography,
-  IconButton,
-  Divider,
 } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
-import Facebook from "@mui/icons-material/Facebook";
-import Instagram from "@mui/icons-material/Instagram";
-import WhatsApp from "@mui/icons-material/WhatsApp";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import ReactWhatsapp from "react-whatsapp";
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import * as React from "react";
+import { useRef, useState } from "react";
+import ReactWhatsapp from "react-whatsapp";
 
 const Contact = () => {
-  const goldColor = '#d3a737';
+  const goldColor = "#d3a737";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -99,17 +98,17 @@ const Contact = () => {
       <Typography
         variant="h2"
         sx={{
-            textAlign: "center",
-            color: "white",
-            mb: 2,
-            fontFamily: "Merriweather",
-            fontSize:{xs:"3.5rem", md:"3.75rem"}
-          }}
+          textAlign: "center",
+          color: "white",
+          mb: 2,
+          fontFamily: "Merriweather",
+          fontSize: { xs: "3.5rem", md: "3.75rem" },
+        }}
         component={motion.div}
-        initial={{translateX:90, opacity:0}}
-        whileInView={{translateX:0, opacity:1}}
-        transition={{duration:1}}
-        exit={{translateX:0}}
+        initial={{ translateX: 90, opacity: 0 }}
+        whileInView={{ translateX: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        exit={{ translateX: 0 }}
       >
         Contacto
       </Typography>
@@ -122,15 +121,19 @@ const Contact = () => {
           my: 3,
         }}
         component={motion.div}
-        initial={{translateY:-90, opacity:0}}
-        whileInView={{translateY:0, opacity:1}}
-        transition={{duration:1}}
-        exit={{translateX:0}}
+        initial={{ translateY: -90, opacity: 0 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        exit={{ translateX: 0 }}
       />
-      <Card elevation={5} sx={{ minWidth: 120, p: 2 }} component={motion.div}
-        initial={{opacity:0}}
-        whileInView={{opacity:1}}
-        transition={{duration:1}}>
+      <Card
+        elevation={5}
+        sx={{ minWidth: 120, p: 2 }}
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <Grid container justifyContent="space-around">
           <Grid item xs={12} md={5}>
             <Box component="form" ref={form} onSubmit={sendEmail}>
@@ -208,43 +211,84 @@ const Contact = () => {
           <Grid item xs={12} md={5}>
             <Box>
               <Box>
-                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="mailto:email@gmail.com"
-                  target={"_blank"}>
+                <Button
+                  sx={{
+                    color: goldColor,
+                    fontSize: "16px",
+                    textTransform: "none",
+                  }}
+                  href="mailto:email@gmail.com"
+                  target={"_blank"}
+                >
                   <EmailIcon sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>email@gmail.com</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="tel:+573226174846"
-                  target={"_blank"}>
+                <Button
+                  sx={{
+                    color: goldColor,
+                    fontSize: "16px",
+                    textTransform: "none",
+                  }}
+                  href="tel:+573226174846"
+                  target={"_blank"}
+                >
                   <PhoneAndroidIcon sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>3125719950</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="https://www.facebook.com/lina.quesada.75"
-                  target={"_blank"}>
+                <Button
+                  sx={{
+                    color: goldColor,
+                    fontSize: "16px",
+                    textTransform: "none",
+                  }}
+                  href="https://www.facebook.com/lina.quesada.75"
+                  target={"_blank"}
+                >
                   <Facebook sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>Lina Quesada</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} href="https://www.instagram.com/linaquesada/"
-                  target={"_blank"}>
+                <Button
+                  sx={{
+                    color: goldColor,
+                    fontSize: "16px",
+                    textTransform: "none",
+                  }}
+                  href="https://www.instagram.com/linaquesada/"
+                  target={"_blank"}
+                >
                   <Instagram sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>Lina Quesada</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: goldColor, fontSize: "16px", textTransform:"none" }} component={ReactWhatsapp} number="57-322-617-4846" message="Hello World!!!">
+                <Button
+                  sx={{
+                    color: goldColor,
+                    fontSize: "16px",
+                    textTransform: "none",
+                  }}
+                  component={ReactWhatsapp}
+                  number="57-322-617-4846"
+                  message="Hello World!!!"
+                >
                   <WhatsApp sx={{ mr: 2 }} />
                   <span style={{ color: "#000032" }}>3125719950</span>
                 </Button>
               </Box>
               <Box>
-                <Button sx={{ color: "red", fontSize: "16px", textTransform:"none" }}>
+                <Button
+                  sx={{ color: "red", fontSize: "16px", textTransform: "none" }}
+                >
                   <LocationOnIcon sx={{ mr: 2 }} />
-                  <span style={{ color: "#000032" }}>Cali, Valle del Cauca, Colombia.</span>
+                  <span style={{ color: "#000032" }}>
+                    Cali, Valle del Cauca, Colombia.
+                  </span>
                 </Button>
               </Box>
             </Box>
@@ -267,7 +311,8 @@ const Contact = () => {
 
 export default Contact;
 
- {/* <Typography
+{
+  /* <Typography
                 variant="body"
                 sx={{
                   display: "flex",
@@ -320,4 +365,5 @@ export default Contact;
                   <WhatsApp sx={{ mx: 2, color: "#f99f00" }} />
                   Asesorías
                 </a>
-              </Typography> */}
+              </Typography> */
+}

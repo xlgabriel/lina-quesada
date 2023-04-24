@@ -1,27 +1,15 @@
 import {
-  Button,
-  Container,
-  Grid,
-  Box,
-  Typography,
-  IconButton,
-  Card,
-  Paper,
-  Divider,
-  CardMedia,
-  CardContent,
-  CardActions,
+  Box, Card, CardMedia, Container, Divider, Grid, Paper, Typography
 } from "@mui/material";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-import { Pagination, Navigation, EffectCoverflow } from "swiper";
 import { courseCertification, studies } from "./aboutUsContants";
 
 const About = () => {

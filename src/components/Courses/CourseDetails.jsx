@@ -1,31 +1,17 @@
 import {
   Box,
-  Container,
+  Divider,
+  Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Typography,
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Divider,
-  Grid,
-  Button,
-  CardActions,
 } from "@mui/material";
 
-import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-
 import SendIcon from "@mui/icons-material/Send";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { courseContent } from "./constCourses";
 
 const CourseDetails = ({ courseDetail = courseContent[0] }) => {
@@ -344,7 +330,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
                 color: "#000",
                 mb: 2,
                 py: 1,
-                textDecoration:"underline",
+                textDecoration: "underline",
               }}
             >
               Valor
@@ -394,7 +380,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
                 color: "#000",
                 mb: 2,
                 py: 1,
-                textDecoration:"underline",
+                textDecoration: "underline",
               }}
             >
               Medios de pago
