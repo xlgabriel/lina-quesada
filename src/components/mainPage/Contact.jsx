@@ -24,6 +24,7 @@ import ReactWhatsapp from "react-whatsapp";
 
 const Contact = () => {
   const goldColor = "#d3a737";
+  const goldColor1 = "#d4bc88";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -114,7 +115,7 @@ const Contact = () => {
       </Typography>
       <Divider
         sx={{
-          backgroundColor: "#f99f00",
+          backgroundColor: goldColor1,
           width: "40%",
           height: 3,
           mx: "auto",
@@ -128,7 +129,7 @@ const Contact = () => {
       />
       <Card
         elevation={5}
-        sx={{ minWidth: 120, p: 2 }}
+        sx={{ minWidth: 120, p: 2, backgroundImage:"url(images/fondo-marmol.jpg)",backgroundSize:"contain" }}
         component={motion.div}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -193,7 +194,7 @@ const Contact = () => {
                     value="Send"
                     sx={{
                       width: "100%",
-                      backgroundColor: goldColor,
+                      backgroundColor: goldColor1,
                       color: "#fff",
                       fontSize: "20px",
                       "&:hover": {
@@ -213,7 +214,7 @@ const Contact = () => {
               <Box>
                 <Button
                   sx={{
-                    color: goldColor,
+                    color: goldColor1,
                     fontSize: "16px",
                     textTransform: "none",
                   }}
@@ -227,7 +228,7 @@ const Contact = () => {
               <Box>
                 <Button
                   sx={{
-                    color: goldColor,
+                    color: goldColor1,
                     fontSize: "16px",
                     textTransform: "none",
                   }}
@@ -241,7 +242,7 @@ const Contact = () => {
               <Box>
                 <Button
                   sx={{
-                    color: goldColor,
+                    color: goldColor1,
                     fontSize: "16px",
                     textTransform: "none",
                   }}
@@ -255,7 +256,7 @@ const Contact = () => {
               <Box>
                 <Button
                   sx={{
-                    color: goldColor,
+                    color: goldColor1,
                     fontSize: "16px",
                     textTransform: "none",
                   }}
@@ -269,7 +270,7 @@ const Contact = () => {
               <Box>
                 <Button
                   sx={{
-                    color: goldColor,
+                    color: goldColor1,
                     fontSize: "16px",
                     textTransform: "none",
                   }}

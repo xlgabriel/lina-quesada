@@ -11,7 +11,7 @@ const MainPage = () => {
     return (
         <Box sx={{backgroundColor:'', overflow:"hidden"}}>
             <Grid>
-                <Grid xs="12" md="12"  id="#">
+                <Grid xs="12" md="12"  id="#" sx={{backgroundImage:"url(images/fondo-1.jpg)", backgroundSize:"cover", backgroundPosition:"center", backgroundRepeat: "no-repeat"}}>
                     <Banner/>
                 </Grid>
                 <Grid xs="12" md="12" id="about" sx={{backgroundColor:"#0B0A09"}}>

@@ -14,7 +14,7 @@ const studies = [
     {
       title: "Phiacademy",
       content: "Artista Royal",
-      logo: "images/logo-phiacademy.jpeg"
+      logo: "images/logo-phiacademy.png"
     },
     {
         title: "Master Ana Oprea",

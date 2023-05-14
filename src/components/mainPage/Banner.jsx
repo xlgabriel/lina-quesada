@@ -24,7 +24,7 @@ const Banner = () => {
         >
           <Typography
             variant="h3"
-            sx={{ color: goldColor, fontFamily: "Merriweather" }}
+            sx={{ color: "#d4bc88", fontFamily: "Merriweather" }}
           >
             Bienvenidos! Soy Lina Quesada, Artista Royal
           </Typography>
@@ -39,7 +39,7 @@ const Banner = () => {
           >
             <p>
               Somos especialistas en {""}
-              <span style={{ color: goldColor }}>
+              <span style={{ color: "#d4bc88" }}>
                 Micropigmentación y Microblading avanzado e hiperrealismo
               </span>
               . Teniendo el conocimiento y las habilidades para enseñar y
@@ -47,7 +47,7 @@ const Banner = () => {
             </p>
             <p>
               Te invito a conocer nuestros cursos.{" "}
-              <span style={{ color: goldColor }}>
+              <span style={{ color: "#d4bc88" }}>
                 Inscríbete y aprende este hermoso arte.
               </span>
             </p>
@@ -57,7 +57,7 @@ const Banner = () => {
             sx={{
               display: "flex",
               justifyContent: "center",
-              mb: { xs: 2, md: 0 },
+              mb: { xs: 2, md: 2 },
             }}
             animate={{ rotate: [2, -2, 2] }}
             transition={{ duration: 1.5, repeat: Infinity }}
@@ -66,7 +66,7 @@ const Banner = () => {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: goldColor,
+                backgroundColor: "#d4bc88",
                 fontSize: "20px",
                 borderColor: "#000",
                 color: "#000",
@@ -78,7 +78,36 @@ const Banner = () => {
               component={Link}
               to={"/courses"}
             >
-              Ver cursos
+              Cursos
+            </Button>
+          </Box>
+          <Box
+            component={motion.div}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mb: { xs: 2, md: 2 },
+            }}
+            animate={{ rotate: [2, -2, 2] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            whileHover={{ rotate: 0 }}
+          >
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#d4bc88",
+                fontSize: "20px",
+                borderColor: "#000",
+                color: "#000",
+                "&:hover": {
+                  backgroundColor: "#ffffff",
+                  color: "#000000",
+                },
+              }}
+              component={Link}
+              to={"/courses"}
+            >
+              Procedimientos
             </Button>
           </Box>
         </Grid>
@@ -112,9 +141,10 @@ const Banner = () => {
               }}
             >
               <img
-                src="images/foto-banner-1-removebg.png"
+                src="images/lina-quesada-verde-ps.png"
                 alt=""
                 width="100%"
+                style={{borderRadius:5}}
                 component={motion.div}
                 animate={{ y: [5, -5, 5, -5, 5] }}
                 transition={{ delay: 1, duration: 4, repeat: Infinity }}

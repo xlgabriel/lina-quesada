@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const goldColor = "#d3a737";
+  const goldColor1 = "#d4bc88";
 
   return (
     <Container sx={{ py: 2 }}>
@@ -32,7 +33,7 @@ const Testimonials = () => {
       </Typography>
       <Divider
         sx={{
-          backgroundColor: "#f99f00",
+          backgroundColor: goldColor1,
           width: "40%",
           height: 3,
           mx: "auto",
@@ -60,7 +61,7 @@ const Testimonials = () => {
               transition: { delay: item, duration: 1 },
             }}
           >
-            <Card sx={{ width: "90%", py: 1, mx: "auto" }}>
+            <Card sx={{ width: "90%", py: 1, mx: "auto", backgroundImage:"url(images/fondo-marmol.jpg)",backgroundSize:"cover" }}>
               <CardHeader
                 avatar={<Avatar sx={{ bgcolor: "red", mx: "auto" }}>R</Avatar>}
                 title="Sabrina Marquez"

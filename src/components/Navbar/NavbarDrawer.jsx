@@ -25,6 +25,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const golColor1 = '#d4bc88';
   const goldColor = '#d3a737';
   const [open, setOpen] = useState(false);
   const [navbarState, setNavbarState] = useState(true);
@@ -73,7 +74,7 @@ export default function Navbar() {
                   <Button
                     key={link.title}
                     sx={{
-                      color: goldColor,
+                      color: golColor1,
                       fontSize: "18px",
                       fontWeight: 600,
                       fontFamily: "Merriweather",
@@ -95,7 +96,7 @@ export default function Navbar() {
                 <Button
                   component={Link}
                   sx={{
-                    color: goldColor,
+                    color: golColor1,
                     fontSize: "18px",
                     fontWeight: 600,
                     fontFamily: "Merriweather",
@@ -114,7 +115,7 @@ export default function Navbar() {
                 <Button
                   component={Link}
                   sx={{
-                    color: goldColor,
+                    color: golColor1,
                     fontSize: "18px",
                     fontWeight: 600,
                     fontFamily: "Merriweather",
@@ -132,8 +133,8 @@ export default function Navbar() {
             </Box>
             <IconButton
               sx={{
-                color: goldColor,
-                "&:hover": { transform: "scale(1.2)", color: goldColor },
+                color: golColor1,
+                "&:hover": { transform: "scale(1.2)", color: golColor1 },
               }}
               href="https://www.facebook.com/lina.quesada.75"
               target={"_blank"}
@@ -142,8 +143,8 @@ export default function Navbar() {
             </IconButton>
             <IconButton
               sx={{
-                color: goldColor,
-                "&:hover": { transform: "scale(1.2)", color: goldColor },
+                color: golColor1,
+                "&:hover": { transform: "scale(1.2)", color: golColor1 },
               }}
               href="https://www.instagram.com/linaquesada/"
               target={"_blank"}
@@ -151,7 +152,7 @@ export default function Navbar() {
               <Instragram />
             </IconButton>
             <IconButton
-              sx={{ color: goldColor, "&:hover": { transform: "scale(1.2)" } }}
+              sx={{ color: golColor1, "&:hover": { transform: "scale(1.2)" } }}
               component={ReactWhatsapp}
               number="57-322-617-4846"
               message="Hello World!!!"

@@ -19,7 +19,7 @@ function App() {
         <Navbar></Navbar>
         <Grid>
           <Grid item xs={12} md={12}>
-            <Box sx={{ pt: 12, backgroundColor: "" }}>
+            <Box sx={{ pt: 8, backgroundColor: "" }}>
               <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/courses" element={<Courses />} />
