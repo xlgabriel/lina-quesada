@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'palatino-linotype';
+  src: url(assets/fonts/Palatino-Linotype.ttf) format('truetype');
+}
 
 /* Default CSS */
 html{

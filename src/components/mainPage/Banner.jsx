@@ -8,7 +8,7 @@ const Banner = () => {
 
   return (
     // <Box sx={{ py: 4, overflowY: "hidden", width: "100%" }}>
-    <Container sx={{ pt: 3 }}>
+    <Container sx={{ pt: 6}}>
       <Grid container spacing={2}>
         <Grid
           item
@@ -23,33 +23,35 @@ const Banner = () => {
           exit={{ x: 0 }}
         >
           <Typography
-            variant="h3"
-            sx={{ color: "#d4bc88", fontFamily: "Merriweather" }}
+            variant="h2"
+            sx={{ color: "#d4bc88", fontFamily: "palatino-linotype" }}
           >
             Bienvenidos! Soy Lina Quesada, Artista Royal
           </Typography>
           <Typography
-            variant="h6"
+            variant="h4"
             sx={{
               color: "white",
               my: 4,
-              fontFamily: "Merriweather",
-              textAlign: { xs: "justify" },
+              fontFamily: "palatino-linotype",
+              textAlign: { xs: "" },
             }}
           >
-            <p>
+            {/* <p>
               Somos especialistas en {""}
               <span style={{ color: "#d4bc88" }}>
                 Micropigmentación y Microblading avanzado e hiperrealismo
               </span>
               . Teniendo el conocimiento y las habilidades para enseñar y
               desempeñar este maravilloso arte.
+            </p> */}
+            <p>
+              {/* Te invito a conocer nuestros cursos.{" "} */}
+              Inscríbete ahora a nuestros cursos en <span style={{ color: "#d4bc88" }}>Microblanding y Micropigmentación</span>, y aprende este hermoso arte.
             </p>
             <p>
-              Te invito a conocer nuestros cursos.{" "}
-              <span style={{ color: "#d4bc88" }}>
-                Inscríbete y aprende este hermoso arte.
-              </span>
+              O agenda tu cita y realizate tus procedimientos con nosotros.
+              {/* También te invito a que te realices tus procedimientos con nosotros.{" "}  */}
             </p>
           </Typography>
           <Box
@@ -58,8 +60,11 @@ const Banner = () => {
               display: "flex",
               justifyContent: "center",
               mb: { xs: 2, md: 2 },
+              mx:"auto",
+              width:"60%",
+              bgcolor:"",
             }}
-            animate={{ rotate: [2, -2, 2] }}
+            animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 1.5, repeat: Infinity }}
             whileHover={{ rotate: 0 }}
           >
@@ -69,10 +74,17 @@ const Banner = () => {
                 backgroundColor: "#d4bc88",
                 fontSize: "20px",
                 borderColor: "#000",
+                width:"120px",
+                height:"120px",
+                borderRadius:"50%",
                 color: "#000",
+                my:1,
+                mx:2,
+                boxShadow: "0 0 20px #d4bc88",
                 "&:hover": {
                   backgroundColor: "#ffffff",
                   color: "#000000",
+                  boxShadow: "0 0 20px #d4bc88",
                 },
               }}
               component={Link}
@@ -80,28 +92,23 @@ const Banner = () => {
             >
               Cursos
             </Button>
-          </Box>
-          <Box
-            component={motion.div}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              mb: { xs: 2, md: 2 },
-            }}
-            animate={{ rotate: [2, -2, 2] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            whileHover={{ rotate: 0 }}
-          >
             <Button
               variant="contained"
               sx={{
                 backgroundColor: "#d4bc88",
-                fontSize: "20px",
+                fontSize: "13px",
                 borderColor: "#000",
+                width:"120px",
+                height:"120px",
+                borderRadius:"50%",
                 color: "#000",
+                my:1,
+                mx:2,
+                boxShadow: "0 0 20px #d4bc88",
                 "&:hover": {
                   backgroundColor: "#ffffff",
                   color: "#000000",
+                  boxShadow: "0 0 20px #d4bc88",
                 },
               }}
               component={Link}
@@ -136,8 +143,8 @@ const Banner = () => {
               transition={{ duration: 1 }}
               exit={{ x: 0 }}
               sx={{
-                width: { xs: 300, md: 300 },
-                height: { xs: 500, md: 500 },
+                width: { xs: 300, md: 350 },
+                height: { xs: 500, md: 550 },
               }}
             >
               <img

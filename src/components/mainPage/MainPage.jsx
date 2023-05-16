@@ -9,9 +9,9 @@ import Testimonials from "./Testimonials";
 
 const MainPage = () => {
     return (
-        <Box sx={{backgroundColor:'', overflow:"hidden"}}>
+        <Box sx={{backgroundColor:'black', overflow:"hidden"}}>
             <Grid>
-                <Grid xs="12" md="12"  id="#" sx={{backgroundImage:"url(images/fondo-1.jpg)", backgroundSize:"cover", backgroundPosition:"center", backgroundRepeat: "no-repeat"}}>
+                <Grid xs="12" md="12"  id="#" sx={{backgroundImage:"url(images/fondoLinaQuesada.jpg)", backgroundSize:"60% 100%", backgroundPosition:"center", backgroundRepeat: "no-repeat" }}>
                     <Banner/>
                 </Grid>
                 <Grid xs="12" md="12" id="about" sx={{backgroundColor:"#0B0A09"}}>
