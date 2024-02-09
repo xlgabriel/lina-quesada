@@ -50,7 +50,7 @@ const CoursesDetails = () => {
       location.state.course !== null ? location.state.course : courseContent[0];
     // setCourse(location.state.course)
     setCourse(c);
-    setMessage(`Hola. Me gustaría inscribirme al curso ${c.title}`);
+    setMessage(`Hola. Me gustaría solicitar información sobre el curso ${c.title}`);
     console.log("hiiii" + c.title);
   }, []);
 

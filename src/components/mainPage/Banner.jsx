@@ -8,35 +8,48 @@ const Banner = () => {
 
   return (
     // <Box sx={{ py: 4, overflowY: "hidden", width: "100%" }}>
-    <Container sx={{ pt: 6}}>
+    <Container sx={{ pt: 6 }}>
       <Grid container spacing={2}>
         <Grid
           item
           xs={12}
           sm={12}
-          md={6}
-          lg={6}
+          md={7}
+          lg={7}
           component={motion.div}
           initial={{ x: -900 }}
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
           exit={{ x: 0 }}
+          sx={{mt:7}}
         >
           <Typography
-            variant="h2"
-            sx={{ color: "#d4bc88", fontFamily: "palatino-linotype" }}
+          variant="h2"
+            sx={{ color: "#d4bc88", fontFamily: "palatino-linotype", }}
           >
-            Bienvenidos! Soy Lina Quesada, Artista Royal
+            Bienvenidos! Soy Lina Quesada, Master Royal
           </Typography>
           <Typography
-            variant="h4"
+            
             sx={{
               color: "white",
               my: 4,
-              fontFamily: "palatino-linotype",
+              fontFamily: "DM Serif Display",
               textAlign: { xs: "" },
+              fontSize:"20px",
+              fontWeight:"bold"
             }}
           >
+            Esteticista y Cosmetóloga con más de 15 años de experiencia, con una
+            trayectoria de 7 años en el gremio de la micropigmentación. Se ha
+            formado con las mejores academias internacionales Especializándose a
+            la vez en diversas técnicas con artistas internacionales y
+            nacionales. Ha participado y
+            ganado diferentes campeonatos internacionales y nacionales en la
+            modalidad de la técnica Microblading.
+            Siempre a la vanguardia de las nuevas actualizaciones,
+            para ofrecer siempre lo mejor a los clientes y especializar a los
+            estudiantes en Colombia, Latinoamérica y Europa.
             {/* <p>
               Somos especialistas en {""}
               <span style={{ color: "#d4bc88" }}>
@@ -45,16 +58,14 @@ const Banner = () => {
               . Teniendo el conocimiento y las habilidades para enseñar y
               desempeñar este maravilloso arte.
             </p> */}
-            <p>
-              {/* Te invito a conocer nuestros cursos.{" "} */}
+            {/* <p>
               Inscríbete ahora a nuestros cursos en <span style={{ color: "#d4bc88" }}>Microblanding y Micropigmentación</span>, y aprende este hermoso arte.
             </p>
             <p>
               O agenda tu cita y realizate tus procedimientos con nosotros.
-              {/* También te invito a que te realices tus procedimientos con nosotros.{" "}  */}
-            </p>
+            </p> */}
           </Typography>
-          <Box
+          {/* <Box
             component={motion.div}
             sx={{
               display: "flex",
@@ -116,14 +127,14 @@ const Banner = () => {
             >
               Procedimientos
             </Button>
-          </Box>
+          </Box> */}
         </Grid>
         <Grid
           item
           xs={12}
           sm={12}
-          md={6}
-          lg={6}
+          md={5}
+          lg={5}
           spacing={2}
           justifyContent="center"
         >
@@ -143,15 +154,17 @@ const Banner = () => {
               transition={{ duration: 1 }}
               exit={{ x: 0 }}
               sx={{
-                width: { xs: 300, md: 350 },
-                height: { xs: 500, md: 550 },
+                width: { xs: 300, md: 450 },
+                height: { xs: "auto", md: "auto" },
+                // mb: -9.5,
+                mt:4
               }}
             >
               <img
-                src="images/lina-quesada-verde-ps.png"
+                src="images/lina-quesada-verde-sin-fondo.png"
                 alt=""
                 width="100%"
-                style={{borderRadius:5}}
+                style={{ borderRadius: 5}}
                 component={motion.div}
                 animate={{ y: [5, -5, 5, -5, 5] }}
                 transition={{ delay: 1, duration: 4, repeat: Infinity }}

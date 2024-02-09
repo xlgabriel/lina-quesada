@@ -30,9 +30,15 @@ export default function NavListDrawer({ onClick, navLinks }) {
             </ListItem>
           ))}
           <ListItem disablePadding>
-            <ListItemButton component={Link} to={"/courses"}>
+            <ListItemButton component={Link} to={"/cursos"}>
               {/* <ListItemIcon>{item.icon}</ListItemIcon> */}
               <ListItemText primary={"Cursos"} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to={"/procedimientos"}>
+              {/* <ListItemIcon>{item.icon}</ListItemIcon> */}
+              <ListItemText primary={"Procedimientos"} />
             </ListItemButton>
           </ListItem>
         </List>

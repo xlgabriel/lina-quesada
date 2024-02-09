@@ -2,12 +2,17 @@ const courseCertification = [
     {
         title: "Nuestro Master Class",
         content:
-          "Una Formación a un alto nivel de aprendizaje para lograr seguridad y profesionalismo a la hora de desempeñar este maravilloso arte. está diseñado de manera que todos puedan entenderlo, incluso aquellos sin conocimientos previos.",
+          "Una Formación a un alto nivel de aprendizaje para lograr seguridad y profesionalismo a la hora de desempeñar este maravilloso arte. Está diseñado de manera que todos puedan entenderlo, incluso aquellos sin conocimientos previos.",
       },
       {
         title: "Nuestra certificación",
         content:
           "Acorde a mis estudios realizados durante estos últimos años con las mejores academias y artistas a nivel mundial.",
+      },
+      {
+        title: "Procedimientos",
+        content:
+          "Somos expertos en realizar procedimientos de microblanding y micropigmentación en cejas y labios.",
       },
 ]
 const studies = [

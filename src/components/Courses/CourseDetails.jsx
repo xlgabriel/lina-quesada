@@ -16,6 +16,7 @@ import { courseContent } from "./constCourses";
 
 const CourseDetails = ({ courseDetail = courseContent[0] }) => {
   const goldColor = "#d3a737";
+  const goldColor1 = "#d4bc88";
   const [expanded, setExpanded] = useState(false);
   const [course, setCourse] = useState();
   const handleChange = (panel) => (event, isExpanded) => {
@@ -41,7 +42,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             fontWeight: "bold",
             textAlign: "center",
             fontFamily: "Merriweather",
-            color: goldColor,
+            color: goldColor1,
             overflowWrap: "break-word",
             hyphens: "manual",
           }}
@@ -68,7 +69,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             fontWeight: "bold",
             textAlign: "center",
             fontFamily: "Merriweather",
-            color: goldColor,
+            color: goldColor1,
           }}
         >
           {courseDetail.subtitle2}
@@ -117,7 +118,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
           }}
         >
           El curso tiene una duración de{" "}
-          <span style={{ color: goldColor }}>
+          <span style={{ color: goldColor1 }}>
             {courseDetail.days.length}{" "}
             {courseDetail.days.length > 1 ? "días" : "día"}
           </span>{" "}
@@ -133,7 +134,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             fontWeight: "bold",
             textAlign: "center",
             bgcolor: "black",
-            color: goldColor,
+            color: goldColor1,
             py: 1,
           }}
         >
@@ -143,7 +144,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
           {courseDetail.techniques.map((item) => (
             <ListItem>
               <ListItemText sx={{ color: "white" }}>
-                <span style={{ color: goldColor }}>
+                <span style={{ color: goldColor1 }}>
                   {item.name} {item.description !== "" ? ":" : ""}{" "}
                 </span>
                 {item.description}
@@ -160,7 +161,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             fontWeight: "bold",
             textAlign: "center",
             bgcolor: "black",
-            color: goldColor,
+            color: goldColor1,
             py: 1,
           }}
         >
@@ -170,7 +171,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
           {courseDetail.content.map((item) => (
             <ListItem>
               <ListItemIcon>
-                <SendIcon sx={{ color: goldColor }} />
+                <SendIcon sx={{ color: goldColor1 }} />
               </ListItemIcon>
               <ListItemText
                 sx={{ color: "white" }}
@@ -190,7 +191,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             textAlign: "center",
             mb: 2,
             bgcolor: "black",
-            color: goldColor,
+            color: goldColor1,
             py: 1,
           }}
         >
@@ -210,7 +211,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             >
               Kit profesional
             </Typography>
-            <List sx={{ px: 2 }}>
+            {/* <List sx={{ px: 2 }}>
               {courseDetail.kits[0].map((item) => (
                 <ListItem>
                   <ListItemIcon>
@@ -222,9 +223,9 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
                   ></ListItemText>
                 </ListItem>
               ))}
-            </List>
+            </List> */}
           </Grid>
-          <Grid item xs={12} md={6}>
+          {/* <Grid item xs={12} md={6}>
             <Typography
               variant="h6"
               sx={{
@@ -250,7 +251,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
                 </ListItem>
               ))}
             </List>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Box>
       {/* <Box sx={{ bgcolor: "black" }}>
@@ -318,7 +319,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
           ))}
         </Timeline>
       </Box> */}
-      <Box sx={{ backgroundColor: goldColor }}>
+      {/* <Box sx={{ backgroundColor: goldColor }}>
         <Grid container sx={{ py: 1 }}>
           <Grid item xs={12} md={6}>
             <Typography
@@ -406,7 +407,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             </Typography>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

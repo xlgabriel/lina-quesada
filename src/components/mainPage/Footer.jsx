@@ -2,7 +2,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 
 const Footer = () => {
     return (
-        <Box sx={{ backgroundColor:"black", display:"flex", justifyContent:"center", textAlign:"center", py:3}}>
+        <Box sx={{ backgroundColor:"black", display:"flex", justifyContent:"center", textAlign:"center", py:2}}>
             <Grid>
             <Typography component="a" href="/" sx={{p:5}}>
                 <img

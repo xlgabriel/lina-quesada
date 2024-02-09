@@ -30,24 +30,25 @@ import CourseDetails from "./CourseDetails";
 
 const Courses = () => {
   const goldColor = '#d3a737';
+  const goldColor1 = "#d4bc88";
   const [course, setCourse] = useState();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   const openDrawer = (item) => {
     setOpen(true);
     setCourse(item);
-    setMessage(`Hola. Me gustaría inscribirme al curso ${item.title}`);
+    setMessage(`Hola. Me gustaría solicitar más información sobre el curso ${item.title}`);
     console.log('drawer openned');
   };
   const handleClose = () =>{
     setOpen(false);
   }
   return (
-    <Container sx={{ backgroundColor: "", height: "auto" }}>
+    <Container sx={{ backgroundColor: "", height: "auto", pt:8, backgroundImage:"url(images/logo-lina-quesada-2-ps.png)", backgroundSize:{xs: "100% 70%", md:"auto 100%"}, backgroundPosition:"center", backgroundRepeat: "no-repeat"}}>
       <Typography
         variant="h3"
         sx={{
-          color: goldColor,
+          color: goldColor1,
           fontFamily: "Merriweather",
           textAlign: "center",
         }}
@@ -56,7 +57,7 @@ const Courses = () => {
       </Typography>
       <Divider
         sx={{
-          backgroundColor: goldColor,
+          backgroundColor: goldColor1,
           width: "40%",
           height: 3,
           mx: "auto",
@@ -86,7 +87,7 @@ const Courses = () => {
               <Paper
                 elevation={3}
                 sx={{
-                  height: { sm: "auto", md: 330 },
+                  height: { sm: "auto", md: 400 },
                   overflowX: "hidden",
                   display: "flex",
                   flexWrap: "wrap",
@@ -99,7 +100,7 @@ const Courses = () => {
               >
                 <CardMedia
                   component="img"
-                  sx={{ height: "150px", backgroundSize: "contain" }}
+                  sx={{ height: "225px", backgroundSize: "contain" }}
                   src={item.photo}
                   srcSet={`${item.photo} 2x`}
                   loading="lazy"
@@ -206,7 +207,7 @@ const Courses = () => {
               variant="contained"
               sx={{
                 width: { xs: "100%", md: "30%" },
-                backgroundColor: goldColor,
+                backgroundColor: goldColor1,
                 fontSize: "18px",
                 borderColor: "#000",
                 color: "#000",
@@ -220,7 +221,7 @@ const Courses = () => {
               number="57-322-617-4846"
               message={message}
             >
-              Inscríbete Ahora
+              Solicitar información
             </Button>
           </DialogActions>
         </Dialog>

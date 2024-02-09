@@ -25,10 +25,10 @@ const courseContent =
                     name: 'Hibrida',
                     description: 'Combinación de dos técnicas Microblading y el Powder brows. El primero busca más el realismo y con el segundo complementa profundidad, saturación y definición al resultado.'
                 },
-                {
-                    name: 'Compacto',
-                    description: 'Una técnica de mayor realce y definición al contorno de las cejas, también es una alternativa para realizar en procedimiento anterior como tatuajes o micropigmentación Te enseño a clasificar en diseño, color y técnica apropiada para esos casos.'
-                },
+                // {
+                //     name: 'Compacto',
+                //     description: 'Una técnica de mayor realce y definición al contorno de las cejas, también es una alternativa para realizar en procedimiento anterior como tatuajes o micropigmentación Te enseño a clasificar en diseño, color y técnica apropiada para esos casos.'
+                // },
             ],
             content: ['Introducción en microblanding', "Visagismo, diseño de cejas y clasificación de espinas", "Conocimiento de la piel", "Profundidad y presición.", "Indicaciones y contraindicaciones",
                 "Historía clínica", "Bioseguridad", "Anestesia", "Cuidados post tratamiento", "Protocolo completo para realizar el procedimiento de cejas desde el inicio hasta el final",
@@ -146,7 +146,7 @@ const courseContent =
                     description: 'Hidra BB-Lips con Hialurónico, Neutralización, Revitalización, Full color.'
                 },
             ],
-            content: [],
+            content: ['El contenido de este curso reune el contenido de los cursos de Master Class VIP en Cejas y Master Class Micro Lips'],
             kits:
                 [
                     ["1 dermógrado + 20 agujas", "1 inductor", "10 agujas microblanding.", '3 pigmentos profesionales para cejas.', '3 pigmentos para labios.', '1 vial de ácido hialurónico en hidratación.',
@@ -157,8 +157,6 @@ const courseContent =
             days: [
 
                 ['Introducción al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
-                    'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
-                ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
                     'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
                 ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
                     'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],

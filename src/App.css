@@ -3,6 +3,15 @@
   src: url(assets/fonts/Palatino-Linotype.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'DM Serif Display';
+  src: url(assets/fonts/DMSerifDisplay-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(assets/fonts/Quicksand-Bold.ttf) format('truetype');
+}
 /* Default CSS */
 html{
   scroll-behavior: smooth;

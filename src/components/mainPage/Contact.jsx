@@ -100,7 +100,7 @@ const Contact = () => {
         variant="h2"
         sx={{
           textAlign: "center",
-          color: "white",
+          color: goldColor1,
           mb: 2,
           fontFamily: "Merriweather",
           fontSize: { xs: "3.5rem", md: "3.75rem" },

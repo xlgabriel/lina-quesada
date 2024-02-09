@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { courseCertification, studies } from "./aboutUsContants";
 
-const About = () => {
+const Trayectoria = () => {
   const goldColor = '#d3a737';
   const goldColor1 = "#d4bc88";
 
@@ -60,7 +60,7 @@ const About = () => {
         variant="h3"
         sx={{ textAlign: "center", color: "white", my: 2, fontFamily: "Merriweather" }}
         component={motion.div} initial={{y:-50, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:1}}
-      >
+        >
         Mis<span style={{color:goldColor1}}> certificaciones</span>
       </Typography>
           </Grid>
@@ -83,7 +83,7 @@ const About = () => {
           ))}
         </Grid>
       </Box>
-      <Box sx={{ py: 2, backgroundColor: "#0B0A09" }} >
+      {/* <Box sx={{ py: 2, backgroundColor: "#0B0A09" }} >
         <Swiper
           style={{
             backgroundColor: "#0B0A09",
@@ -153,9 +153,9 @@ const About = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Box>
+      </Box> */}
     </Container>
   );
 };
 
-export default About;
+export default Trayectoria;
