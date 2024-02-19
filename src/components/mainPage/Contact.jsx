@@ -32,8 +32,8 @@ const Contact = () => {
   const [snackbar, setSnackbar] = useState({
     open: false,
     variant: "success",
-    vertical: "top",
-    horizontal: "center",
+    vertical: "bottom",
+    horizontal: "right",
     snackbarMessage: "Enviado con éxito",
   });
   const { vertical, horizontal, open, variant, snackbarMessage } = snackbar;
@@ -53,8 +53,8 @@ const Contact = () => {
       setSnackbar({
         open: true,
         variant: "error",
-        vertical: "top",
-        horizontal: "center",
+        vertical: "bottom",
+        horizontal: "right",
         snackbarMessage: "Por favor llene todos los campos",
       });
     } else {
@@ -129,7 +129,7 @@ const Contact = () => {
       />
       <Card
         elevation={5}
-        sx={{ minWidth: 120, p: 2, backgroundImage:"url(images/fondo-marmol.jpg)",backgroundSize:"contain" }}
+        sx={{ minWidth: 120, px:2, py:4, borderRadius:5 }}
         component={motion.div}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

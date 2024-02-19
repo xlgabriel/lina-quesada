@@ -61,7 +61,7 @@ const Testimonials = () => {
               transition: { delay: item, duration: 1 },
             }}
           >
-            <Card sx={{ width: "90%", py: 1, mx: "auto", backgroundImage:"url(images/fondo-marmol.jpg)",backgroundSize:"cover" }}>
+            <Card sx={{ width: "90%", py: 1, mx: "auto", backgroundImage:"url(images/fondo-marmol-dorado.jpg)",backgroundSize:"cover" }}>
               <CardHeader
                 avatar={<Avatar sx={{ bgcolor: "red", mx: "auto" }}>R</Avatar>}
                 title="Sabrina Marquez"

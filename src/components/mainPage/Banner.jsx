@@ -34,7 +34,7 @@ const Banner = () => {
             sx={{
               color: "white",
               my: 4,
-              fontFamily: "DM Serif Display",
+              fontFamily: "Quicksand",
               textAlign: { xs: "" },
               fontSize:"20px",
               fontWeight:"bold"
@@ -154,7 +154,7 @@ const Banner = () => {
               transition={{ duration: 1 }}
               exit={{ x: 0 }}
               sx={{
-                width: { xs: 300, md: 450 },
+                width: { xs: 350, md: 450 },
                 height: { xs: "auto", md: "auto" },
                 // mb: -9.5,
                 mt:4
