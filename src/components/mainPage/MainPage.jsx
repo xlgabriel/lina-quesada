@@ -16,14 +16,14 @@ const MainPage = () => {
     return (
         <Box sx={{backgroundColor:'', overflow:"hidden"}}>
             <Grid>
-                <Grid xs="12" md="12"  id="#" sx={{backgroundImage:"url(images/logo-lina-quesada-2-ps.png)", backgroundSize:{xs: "100% 60%", md:"auto 100%"}, backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundColor:"black"}}>
+                <Grid xs="12" md="12" id="#" sx={{backgroundImage:"url(images/logo-lina-quesada-2-ps.png)", backgroundSize:{xs: "100% 60%", md:"auto 100%"}, backgroundPosition: {xs:"8px 90%", md:"center"}, backgroundRepeat: "no-repeat", backgroundColor:"black"}}>
                     {/* <img src="images/logo-lina-quesada-2.png" style={{position: "absolute", top:0, left:0, opacity: 0.6}}></img> */}
                     <Banner/>
                 </Grid>
-                <Grid xs="12" md="12" id="testimonials" sx={{bgcolor:goldColor1}}>
+                <Grid xs="12" md="12" id="" sx={{bgcolor:goldColor1}}>
                    <CursosYProcedimientos/>                     
                 </Grid>
-                <Grid xs="12" md="12" id="testimonials" sx={{bgcolor:"white"}}>
+                <Grid xs="12" md="12" id="trayectoria" sx={{bgcolor:"#F4F4F4"}}>
                    <Trayectoria1/>                     
                 </Grid>
                 <Grid xs="12" md="12" id="testimonials" sx={{bgcolor:"white"}}>

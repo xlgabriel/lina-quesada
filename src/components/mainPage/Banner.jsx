@@ -21,7 +21,7 @@ const Banner = () => {
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
           exit={{ x: 0 }}
-          sx={{mt:7}}
+          sx={{mt:7, px:{xs:1, md:0}, ml:{xs:2, md:0}, textAlign:{xs:"center", md:"left"}}}
         >
           <Typography
           variant="h2"
@@ -35,7 +35,6 @@ const Banner = () => {
               color: "white",
               my: 4,
               fontFamily: "Quicksand",
-              textAlign: { xs: "" },
               fontSize:"20px",
               fontWeight:"bold"
             }}

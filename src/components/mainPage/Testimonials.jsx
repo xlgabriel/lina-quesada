@@ -15,8 +15,8 @@ const Testimonials = () => {
   const goldColor1 = "#d4bc88";
 
   return (
-    <Container sx={{ py: 2 }}>
-      <Typography
+    <Container sx={{ py: 4 }}>
+      {/* <Typography
         sx={{
           textAlign: "center",
           color: "white",
@@ -44,7 +44,7 @@ const Testimonials = () => {
         whileInView={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         exit={{ translateX: 0 }}
-      />
+      /> */}
       <Grid container sx={{ my: 3 }} gap={{ xs: 2, md: 0 }}>
         {[0.1, 0.2, 0.3].map((item) => (
           <Grid

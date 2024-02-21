@@ -210,7 +210,7 @@ const Contact = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={5}>
-            <Box>
+            <Box sx={{mt:{xs:2, md:0}}}>
               <Box>
                 <Button
                   sx={{
