@@ -8,7 +8,7 @@ const Banner = () => {
 
   return (
     // <Box sx={{ py: 4, overflowY: "hidden", width: "100%" }}>
-    <Container sx={{ pt: 6 }}>
+    <Container sx={{ pt:{xs:0, md:6} }}>
       <Grid container spacing={2}>
         <Grid
           item
