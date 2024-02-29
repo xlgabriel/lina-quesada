@@ -44,7 +44,9 @@ export default function Navbar() {
 
   const [h, setH] = useState("auto");
   const [w, setW] = useState("173");
-  
+  const [xsh, setXsh] = useState("auto");
+  const [xsw, setXsw] = useState("113");
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       
@@ -54,9 +56,13 @@ export default function Navbar() {
         if(position > 50){
           setH("auto");
           setW("83")
+          setXsh("auto")
+          setXsw("83")
         }else{
           setH("auto");
           setW("173")
+          setXsh("auto")
+          setXsw("93")
         }
       }
 
@@ -71,12 +77,28 @@ export default function Navbar() {
       <AppBar position="fixed" sx={{ bgcolor: "#000", backdropFilter:"blur(8px)", py:1}}>
         <Container>
           <Toolbar>
-            <Typography sx={{ flexGrow: 1 }} component="a" href="/">
+            <Typography sx={{ flexGrow: 1, display:{xs:"none", md:"flex"} }} component="a" href="/">
               <img
                 src="images/logo-lina-quesada-2-rec.png"
                 alt="logo-lina-quesada"
                 width={w}
                 height={h}
+                fluid
+              />
+              {/* <img
+                src="images/navbar-brand.png"
+                alt="logo2-lina-quesada"
+                width="147"
+                height="26"
+                fluid
+              /> */}
+            </Typography>
+            <Typography sx={{ flexGrow: 1, display:{xs:"flex", md:"none"} }} component="a" href="/">
+              <img
+                src="images/logo-lina-quesada-2-rec.png"
+                alt="logo-lina-quesada"
+                width={xsw}
+                height={xsh}
                 fluid
               />
               {/* <img
