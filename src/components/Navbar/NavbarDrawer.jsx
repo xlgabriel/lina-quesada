@@ -221,8 +221,8 @@ export default function Navbar() {
             <IconButton
               sx={{ color: golColor1, "&:hover": { transform: "scale(1.2)" }, mr:5 }}
               component={ReactWhatsapp}
-              number="57-322-617-4846"
-              message="Hello World!!!"
+              number="57-312-571-9950"
+              message=""
             >
               <WhatsApp />
             </IconButton>

@@ -232,7 +232,7 @@ const Contact = () => {
                     fontSize: "16px",
                     textTransform: "none",
                   }}
-                  href="tel:+573226174846"
+                  href="tel:+573125719950"
                   target={"_blank"}
                 >
                   <PhoneAndroidIcon sx={{ mr: 2 }} />
@@ -275,7 +275,7 @@ const Contact = () => {
                     textTransform: "none",
                   }}
                   component={ReactWhatsapp}
-                  number="57-322-617-4846"
+                  number="57-312-571-9950"
                   message="Hello World!!!"
                 >
                   <WhatsApp sx={{ mr: 2 }} />
