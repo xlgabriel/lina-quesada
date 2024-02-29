@@ -32,16 +32,16 @@ import CourseDetails from "../Courses/CourseDetails";
 const Procedimientos = () => {
   const procedimientos = [
     {
-      title: "Natural Line",
+      title: "Técnica Natural Line",
       image: "images/tecnica-natural-line-1.jpg",
     },
     {
-      title: "Micropigmentación en labios",
-      image: "images/microlips-2.jpg",
+      title: "Técnica Hidra BB-Lips",
+      image: "images/microlips-1.jpg",
     },
     {
-      title: "Microblanding en cejas",
-      image: "images/microblanding-1.JPEG",
+      title: "Técnica Sombreado Powder Brows",
+      image: "images/sombreado-powder-brows.JPEG",
     },
   ];
   const goldColor = "#d3a737";
@@ -125,8 +125,8 @@ const Procedimientos = () => {
                 ></CardMedia>
                 <CardContent sx={{ width: "100%", textAlign: "center"}}>
                   <Typography
-                    variant="h6"
-                    sx={{ fontWeight: "600", fontFamily: "Merriweather" }}
+                    variant=""
+                    sx={{ fontWeight: "600", fontFamily: "Merriweather", fontSize: "20px" }}
                   >
                     {item.title}
                   </Typography>
@@ -155,7 +155,7 @@ const Procedimientos = () => {
                       bgcolor: goldColor1,
                       ml: "auto",
                       py:2,
-                      fontSize: "17px",
+                      fontSize: "15px",
                       fontWeight: 800,
                       width: "100%",
                       color: "black",
