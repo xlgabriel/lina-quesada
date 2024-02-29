@@ -21,7 +21,7 @@ const Banner = () => {
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
           exit={{ x: 0 }}
-          sx={{mt:7, px:{xs:1, md:0}, ml:{xs:0,md:0}, textAlign:{xs:"center", md:"left"}}}
+          sx={{mt:7, px:{xs:1, md:0}, textAlign:{xs:"center", md:"left"}}}
         >
           <Typography
           variant="h2"
