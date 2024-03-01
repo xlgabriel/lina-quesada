@@ -6,11 +6,11 @@
 const courseContent =
     [
         {
-            title: 'Master Class VIP en Cejas',
-            subtitle1: 'Microblanding y Micropigmentación',
+            title: 'Master Class VIP Microblanding Avanzado',
+            subtitle1: 'Natural Line Trazos Hiperrealistas',
             subtitle2: "Presencial Grupal / Personalizado",
             photo: 'images/microblanding-1.jpeg',
-            photos: ['images/microblanding-1.jpeg', 'images/microblanding-6.jpg',],
+            photos: ['images/microblanding-1.jpeg'],
             description: "Aprenderás con nosotros la técnica más novedosa del mundo, al realizar trazos manuales simulando vellos naturales a través de la implantación de pigmentos.",
             techniques: [
                 {
@@ -18,13 +18,17 @@ const courseContent =
                     description: 'Trazos manuales simulando vellos naturales a través de la implantación de pigmentos.'
                 },
                 {
-                    name: 'Powder Brows',
-                    description: 'Efecto polvo, obteniendo menos intensidad en la zona de la cabeza y mayor potencia de color en el final de la ceja.'
+                    name: 'Natural Line',
+                    description: 'Realizando conexiones y trazos libres adaptadas a la necesidad. Es la creación de cejas únicas a su máxima expresión, elegancia y naturalidad.'
                 },
-                {
-                    name: 'Hibrida',
-                    description: 'Combinación de dos técnicas Microblading y el Powder brows. El primero busca más el realismo y con el segundo complementa profundidad, saturación y definición al resultado.'
-                },
+                // {
+                //     name: 'Powder Brows',
+                //     description: 'Efecto polvo, obteniendo menos intensidad en la zona de la cabeza y mayor potencia de color en el final de la ceja.'
+                // },
+                // {
+                //     name: 'Hibrida',
+                //     description: 'Combinación de dos técnicas Microblading y el Powder brows. El primero busca más el realismo y con el segundo complementa profundidad, saturación y definición al resultado.'
+                // },
                 // {
                 //     name: 'Compacto',
                 //     description: 'Una técnica de mayor realce y definición al contorno de las cejas, también es una alternativa para realizar en procedimiento anterior como tatuajes o micropigmentación Te enseño a clasificar en diseño, color y técnica apropiada para esos casos.'
@@ -32,8 +36,53 @@ const courseContent =
             ],
             content: ['Introducción en microblanding', "Visagismo, diseño de cejas y clasificación de espinas", "Conocimiento de la piel", "Profundidad y presición.", "Indicaciones y contraindicaciones",
                 "Historía clínica", "Bioseguridad", "Anestesia", "Cuidados post tratamiento", "Protocolo completo para realizar el procedimiento de cejas desde el inicio hasta el final",
-                "Cómo realizar un retoque", "Manejo de equipos", "Técnicas de trazos pelo a pelo, básicas y avanzadas", "Técnicas de Micropingmentación Powder Brows, híbrida y compacto", 
-                "Práctica en piel sintética", "Práctica en modelo real en compañía del máster", "Colorimetría", "Manejo de la fotografía y redes sociales", "Proveedores"],
+                "Cómo realizar un retoque", "Manejo de equipos", "Técnicas de trazos pelo a pelo, avanzadas", "Técnica Natural Line", "Práctica en piel sintética", "Práctica en modelo real en compañía del máster",
+                "Colorimetría", "Manejo de la fotografía y redes sociales", "Proveedores"],
+            kits: [
+                ["1 Inductor", "10 Agujas microblanding", "1 Dermógrago", "10 Agujas para dermógrafo", "1 Kit de 3 pigmentos", "2 Piel Sintética", 
+                "1 Regla calibradora pie de Rey", "1 Regla compás","1 Lápiz de cera", "1 Anestesia en crema", "Cartilla de aprendizaje", "Bloc de notas", "Certificado",
+                "Acompañamiento durante 6 meses vía WhatsApp"],
+                ["Delantal", "Protector para el cabello",]
+            ],
+            days: [
+
+                ['Introducción al microblanding.', 'Visagismo', 'Diseño de cejas, Anatomía, y clasificación de espinas.', 'Conocimiento de la piel, profundidad y precisión.',
+                    'Indicaciones y contraindicaciones', 'Historía clínica', 'Manejo de equipo', 'Trazos básicos y avanzados microblanding.', 'Práctica en piel sintética.'],
+                ['¿Cómo realizar un retoque?', 'Bioseguridad', 'Colorimetría', 'Proveedores', 'Anestesia', 'Cuidados post tratamiento.', 'Protocolo completo para realizar el procedimiento.',
+                    'Técnicas de Micropingmentación Powder Brows, híbrida y compacto.', 'Práctica en piel sintética.'],
+                ['Práctica en modelo real en compañía de la máster.', 'Manejo de la fotografía y redes sociales.', 'Entrega de certificado.'],
+            ],
+            price: {
+                group: '$4.000.000',
+                personalized: '$5.000.000'
+            }
+        },
+        {
+            title: 'Master Class Micropigmentación',
+            subtitle1: 'Técnica en Sombreados',
+            subtitle2: "Presencial Grupal / Personalizado",
+            photo: 'images/microblanding-6.JPG',
+            photos: ['images/microblanding-6.JPG'],
+            description: "",
+            techniques: [
+                {
+                    name: 'Powder Brows',
+                    description: 'Efecto polvo, obteniendo menos intensidad en la zona de la cabeza y mayor potencia de color en el final de la ceja.'
+                },
+                {
+                    name: 'Compacto',
+                    description: 'Obteniendo mayor intensidad y cubrimiento'
+                },
+                {
+                    name: 'Neutralización y corrección',
+                    description: 'ideal para solucionar malos procedimientos en Micropigmentación y colores no deseados.'
+                },
+            ],
+            content: ['Introducción en Micropigmentación', "Visagismo, diseño de cejas", "Conocimiento de la piel", "Profundidad y presición.", 
+                "Indicaciones y contraindicaciones","Historía clínica", "Bioseguridad", "Anestesia", "Cuidados post tratamiento", 
+                "Protocolo completo para realizar el procedimiento de cejas desde el inicio hasta el final", "Cómo realizar un retoque", "Manejo de equipos", 
+                "Técnicas Powder Brows", "Técnica compacto", "Neutralización y correciones", "Práctica en piel sintética", "Práctica en modelo real en compañía del máster",
+                "Colorimetría", "Manejo de la fotografía y redes sociales", "Proveedores"],
             kits: [
                 ["1 Inductor", "10 Agujas microblanding", "1 Dermógrago", "10 Agujas para dermógrafo", "1 Kit de 3 pigmentos", "2 Piel Sintética", 
                 "1 Regla calibradora pie de Rey", "1 Regla compás","1 Lápiz de cera", "1 Anestesia en crema", "Cartilla de aprendizaje", "Bloc de notas", "Certificado",
@@ -129,47 +178,47 @@ const courseContent =
                 personalized: '$5.200.000'
             }
         },
-        {
-            title: 'Master Class VIP',
-            subtitle1: 'Micropingmentación Cejas & Labios',
-            subtitle2: "Presencial Grupal / Personalizado",
-            photo: 'images/masterclassvip.png',
-            photos: ['images/microblanding-1.jpeg', 'images/microlips-2.jpg'],
-            description: "Este Master Class VIP reune nuestros cursos Master Class VIP en Cejas y Master Class Micro Lips.",
-            techniques: [
-                {
-                    name: 'Microblanding y micropigmentación',
-                    description: 'Pelo a pelo, Powder Brows, Híbrida.'
-                },
-                {
-                    name: 'Microlips',
-                    description: 'Hidra BB-Lips con Hialurónico, Neutralización, Revitalización, Full color.'
-                },
-            ],
-            content: ['El contenido de este curso reune el contenido de los cursos de Master Class VIP en Cejas y Master Class Micro Lips'],
-            kits:
-                [
-                    ["1 dermógrado + 20 agujas", "1 inductor", "10 agujas microblanding.", '3 pigmentos profesionales para cejas.', '3 pigmentos para labios.', '1 vial de ácido hialurónico en hidratación.',
-                        '4 pieles sintéticas.', '1 regla pie de rey.', '1 regla compás.', '1 lápiz de cera para cejas.', '1 lápiz para labios.', '1 anestesia en crema.', '1 cartilla de aprendizaje de cejas y labios.',
-                        '1 block de notas.', 'Certificado', 'Acompañamiento durante 6 meses vía Whatsapp.'],
-                    ["Delantal", "Protector para el cabello",]
-                ],
-            days: [
+        // {
+        //     title: 'Master Class VIP',
+        //     subtitle1: 'Micropingmentación Cejas & Labios',
+        //     subtitle2: "Presencial Grupal / Personalizado",
+        //     photo: 'images/masterclassvip.png',
+        //     photos: ['images/microblanding-1.jpeg', 'images/microlips-2.jpg'],
+        //     description: "Este Master Class VIP reune nuestros cursos Master Class VIP en Cejas y Master Class Micro Lips.",
+        //     techniques: [
+        //         {
+        //             name: 'Microblanding y micropigmentación',
+        //             description: 'Pelo a pelo, Powder Brows, Híbrida.'
+        //         },
+        //         {
+        //             name: 'Microlips',
+        //             description: 'Hidra BB-Lips con Hialurónico, Neutralización, Revitalización, Full color.'
+        //         },
+        //     ],
+        //     content: ['El contenido de este curso reune el contenido de los cursos de Master Class VIP en Cejas y Master Class Micro Lips'],
+        //     kits:
+        //         [
+        //             ["1 dermógrado + 20 agujas", "1 inductor", "10 agujas microblanding.", '3 pigmentos profesionales para cejas.', '3 pigmentos para labios.', '1 vial de ácido hialurónico en hidratación.',
+        //                 '4 pieles sintéticas.', '1 regla pie de rey.', '1 regla compás.', '1 lápiz de cera para cejas.', '1 lápiz para labios.', '1 anestesia en crema.', '1 cartilla de aprendizaje de cejas y labios.',
+        //                 '1 block de notas.', 'Certificado', 'Acompañamiento durante 6 meses vía Whatsapp.'],
+        //             ["Delantal", "Protector para el cabello",]
+        //         ],
+        //     days: [
 
-                ['Introducción al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
-                    'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
-                ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
-                    'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
-                ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
-                    'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
-                ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
-                    'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
-            ],
-            price: {
-                group: '$4.200.000',
-                personalized: '$5.200.000'
-            }
-        },
+        //         ['Introducción al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
+        //             'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
+        //         ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
+        //             'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
+        //         ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
+        //             'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
+        //         ['Introducciónsaaa   al microblanding', 'Visagismo', 'Diseño de cejas, anatomía, y clasificación de espinas', 'Conocimiento de la piel, profundidad y precisión',
+        //             'Indicaciones y contraindicaciones historía clínica', 'Manejo del inductor, trazos pelo a pelo en técnicas básicas y avanzadas', 'Prácticas en piel sintéticas'],
+        //     ],
+        //     price: {
+        //         group: '$4.200.000',
+        //         personalized: '$5.200.000'
+        //     }
+        // },
     ]
 
 export { courseContent };

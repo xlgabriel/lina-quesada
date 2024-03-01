@@ -87,7 +87,7 @@ const Courses = () => {
               <Paper
                 elevation={3}
                 sx={{
-                  height: { sm: "auto", md: 400 },
+                  height: { sm: "auto", md: 420 },
                   overflowX: "hidden",
                   display: "flex",
                   flexWrap: "wrap",
@@ -127,7 +127,6 @@ const Courses = () => {
                   </Typography>
                 </CardContent>
                 <Box sx={{ display: "flex", justifyContent: "center" }}></Box>
-                <Hidden only={["xs", "sm"]}>
                   <Button
                     key={`title+${index}`}
                     size="sm"
@@ -138,13 +137,12 @@ const Courses = () => {
                       width: "100%",
                       color: "black",
                       "&:hover": { color: "#efb810" },
+                      display: {xs:"none", md:"block"}
                     }}
                     onClick={() => openDrawer(item)}
                   >
                     Ver más
                   </Button>
-                </Hidden>
-                <Hidden only={["md", "lg"]}>
                   <Button
                     key={`title+${index}`}
                     size="sm"
@@ -155,12 +153,12 @@ const Courses = () => {
                       width: "100%",
                       color: "black",
                       "&:hover": { color: "#efb810" },
+                      display: {xs:"block", md:"none"}
                     }}
                     onClick={() => openDrawer(item)}
                   >
                     Ver más
                   </Button>
-                </Hidden>
               </Paper>
             </Grid>
           ))}
