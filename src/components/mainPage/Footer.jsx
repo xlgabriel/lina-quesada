@@ -6,14 +6,14 @@ const Footer = () => {
             <Grid>
             <Typography component="a" href="/" sx={{p:5}}>
                 <img
-                  width={61}
-                  height={43}
-                  src="images/logo-lina-quesada.png"
-                  alt="logo-sst-colores"
+                  width={81}
+                  height={53}
+                  src="images/logo-lina-quesada-2-rec.png"
+                  alt=""
                   loading="lazy"
             />
             </Typography>
-            <p style={{color:'white', my:2}}>Copyright © 2023 Lina Quesada</p>
+            <p style={{color:'white', my:2}}>Copyright © 2024 Lina Quesada</p>
             </Grid>
         </Box>
     );
