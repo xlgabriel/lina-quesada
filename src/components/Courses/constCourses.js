@@ -11,7 +11,7 @@ const courseContent =
             subtitle2: "Presencial Grupal / Personalizado",
             photo: 'images/microblanding-1.jpeg',
             photos: ['images/microblanding-1.jpeg'],
-            description: "Aprenderás con nosotros la técnica más novedosa del mundo, al realizar trazos manuales simulando vellos naturales a través de la implantación de pigmentos.",
+            description:[ "Aprenderás con nosotros la técnica más novedosa del mundo, al realizar trazos manuales simulando vellos naturales a través de la implantación de pigmentos."],
             techniques: [
                 {
                     name: 'Microblanding básico & avanzado',
@@ -63,7 +63,7 @@ const courseContent =
             subtitle2: "Presencial Grupal / Personalizado",
             photo: 'images/microblanding-6.JPG',
             photos: ['images/microblanding-6.JPG'],
-            description: "",
+            description: [""],
             techniques: [
                 {
                     name: 'Powder Brows',
@@ -103,17 +103,22 @@ const courseContent =
             }
         },
         {
-            title: 'Master Class Perfeccionamiento en Trazos Microblanding',
-            subtitle1: 'Presencial Personalizado',
-            subtitle2: "",
+            title: 'Master Class Natural Line',
+            subtitle1: 'Perfeccionamiento Trazos Hiperrealistas',
+            subtitle2: "Presencial Personalizado",
             photo: 'images/curso-personalizado.jpeg',
             photos: ['images/curso-personalizado.jpeg', 'images/microblanding-5.jpg'],
-            description: "En este curso podrás adquirir habilidades mas avanzadas en estructuras y trazos con mas realismo y naturalidad que te llevaran a un nivel superior. Estamos convencidos de que la excelencia es la base fundamental para el éxito de un profesional del Microblading. Para participar en el máster debe tener conocimientos en microblanding.",
+            description: ["En este curso podrás adquirir habilidades mas avanzadas en estructuras y trazos con mas realismo y naturalidad que te llevaran a un nivel superior. Estamos convencidos de que la excelencia es la base fundamental para el éxito de un profesional del Microblading. Para participar en el máster debe tener conocimientos en microblanding."],
+
             techniques: [
                 {
                     name: 'Hiperrealismo',
                     description: '',
                 },
+                {
+                    name: "Natural Line",
+                    description: "Es una técnica con el fin de expresar naturalidad, realizando conexiones y trazos libres adaptadas a la necesidad sin transformar el movimiento del vello natural. Es la creación de unas cejas únicas a su máxima expresión, elegancia y naturalidad."
+                }
             ],
             content: ['Remotamos diseño de cejas.', 'Anatomía de las cejas.', 'Clasificación de espinas.', 'Trazos hiperrealismo: Inicios y espinas.', 'Tipos de calibre de agujas.',
                 'Protocolo completo para realizar el procedimiento.', 'Práctica en piel sintética.', 'Demostración en modelo real.', 'Certificado'],
@@ -125,7 +130,7 @@ const courseContent =
                 ],
             days: [
                 ['Retomamos diseño de cejas.', 'Anatomía de las cejas.', 'Clasificación de espinas.', 'Trazos hiperrealismo: Inicios y espinas.', 'Tipos de calibre de agujas.',
-                    'Protocolo completo para realizar el procedimiento.', 'Práctica en piel sintética.', 'Demostración en modelo real.', 'Certificado'],
+                    'Protocolo completo para realizar el procedimiento.', 'Práctica en piel sintética.', 'Demostración en modelo real.', 'Certificado'],['']
             ],
             price: {
                 group: '',
@@ -138,7 +143,7 @@ const courseContent =
             subtitle2: "Presencial Grupal / Personalizado",
             photo: 'images/microlips-2.jpg',
             photos: ['images/microlips-1.jpg', 'images/microlips-2.jpg'],
-            description: "La Micropigmentación en labios permite embellecer el rostro con las técnicas más novedosas que están actualmente. A través de la implantación de un tono adecuado al fototipo del color de labio y mejorando la simetría de ellos. Aprenderás para que necesidad están las técnicas",
+            description: ["La Micropigmentación en labios permite embellecer el rostro con las técnicas más novedosas que están actualmente. A través de la implantación de un tono adecuado al fototipo del color de labio y mejorando la simetría de ellos. Aprenderás para que necesidad están las técnicas"],
             techniques: [
                 {
                     name: 'Hidra BB-Lips',

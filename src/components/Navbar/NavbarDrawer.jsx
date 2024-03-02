@@ -22,6 +22,8 @@ const navLinks = [
   { title: "Trayectoria", path: "#trayectoria" },
   { title: "Testimonios", path: "#testimonios" },
   { title: "Contacto", path: "#contacto" },
+  { title: "Cursos", path: "cursos" },
+  { title: "Procedimientos", path: "procedimientos" },
 ];
 
 export default function Navbar() {
@@ -38,7 +40,7 @@ export default function Navbar() {
     navigate("/"+item.path);
     setTimeout(() => {
       setOpen(false)
-      window.location.href = item.path;
+      if(item.path !== "cursos" && item.path !== "procedimientos") window.location.href = item.path; 
     }, 500);
   }
 
@@ -159,7 +161,7 @@ export default function Navbar() {
                   Inicio
                 </Button>
               )}
-              {navbarState && (
+              {/* {navbarState && (
                 <Button
                   component={Link}
                   sx={{
@@ -196,7 +198,7 @@ export default function Navbar() {
                 >
                   Procedimientos
                 </Button>
-              )}
+              )} */}
             </Box>
             <IconButton
               sx={{
@@ -244,7 +246,7 @@ export default function Navbar() {
         anchor="right"
         open={open}
         onClose={() => setOpen(false)}
-        sx={{ display: { xs: "block", lg: "none" } }}
+        sx={{ display: { xs: "block", lg: "none" } , bgcolor: ""}}
       >
         <NavListDrawerResponsive
           onClick={() => setOpen(false)}

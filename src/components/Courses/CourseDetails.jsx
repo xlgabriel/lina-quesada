@@ -105,7 +105,7 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             color: "white",
           }}
         >
-          {courseDetail.description}
+          {courseDetail.description.map((item)=><p>{item}</p>)}
         </Typography>
         <Typography
           variant="body1"
@@ -114,7 +114,6 @@ const CourseDetails = ({ courseDetail = courseContent[0] }) => {
             fontWeight: "",
             textAlign: "justify",
             color: "white",
-            pt: 1.5,
           }}
         >
           El curso tiene una duración de{" "}

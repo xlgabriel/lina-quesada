@@ -144,7 +144,6 @@ const Procedimientos = () => {
                   </Typography> */}
                 </CardContent>
                 <Box sx={{ display: "flex", justifyContent: "center"}}></Box>
-                <Hidden only={["xs", "sm"]}>
                   <Button
                     key={`title+${index}`}
                     variant="contained"
@@ -152,9 +151,10 @@ const Procedimientos = () => {
                     endIcon={<WhatsAppIcon />}
                     aria-label="Explore Bahamas Islands"
                     sx={{
+                      display:{xs:"none", md:"flex"},
                       bgcolor: goldColor1,
                       ml: "auto",
-                      py:2,
+                      py:1,
                       fontSize: "15px",
                       fontWeight: 800,
                       width: "100%",
@@ -163,36 +163,34 @@ const Procedimientos = () => {
                     }}
                     // onClick={() => openDrawer(item)}
                     component={ReactWhatsapp}
-                    number="57-322-617-4846"
+                    number="57-312-571-9950"
                     message={item.title}
                   >
                     Agenda tu cita
                   </Button>
-                </Hidden>
-                <Hidden only={["md", "lg"]}>
                   <Button
                     key={`title+${index}`}
                     size="sm"
                     endIcon={<WhatsAppIcon />}
                     aria-label="Explore Bahamas Islands"
                     sx={{
+                      display:{xs:"flex", md:"none"},
                       bgcolor: goldColor1,
                       ml: "auto",
                       py:1,
-                      fontSize: "17px",
+                      fontSize: "15px",
                       fontWeight: 800,
                       width: "100%",
                       color: "black",
                       "&:hover": { color: goldColor1, bgcolor:'black' },
                     }}
                     component={ReactWhatsapp}
-                    number="57-322-617-4846"
+                    number="57-312-571-9950"
                     message={item.title}
                     // onClick={() => openDrawer(item)}
                   >
                     Agenda tu cita
                   </Button>
-                </Hidden>
               </Paper>
             </Grid>
           ))}
