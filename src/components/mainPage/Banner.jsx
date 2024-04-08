@@ -160,7 +160,7 @@ const Banner = () => {
               }}
             >
               <img
-                src="images/lina-quesada-verde-sin-fondo.png"
+                src="images/foto-banner-7.png"
                 alt=""
                 width="100%"
                 style={{ borderRadius: 5}}
