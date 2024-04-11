@@ -9,11 +9,11 @@ const Trayectoria1 = () => {
     return (
         <Container sx={{ bgcolor: "", pt:2}}>
             <Grid container sx={{display:"flex", justifyContent:"space-around"}}>
-                <Grid item md={6} sx={{display:{xs:"flex", md:"none"}, justifyContent:"center"}}>
-                    <img src='images/Trayectoria 2.png' style={{width:'auto', height:"90vh", marginLeft:10}}></img>
+                <Grid item md={12} sx={{display:{xs:"flex", md:"none"}, justifyContent:"center"}}>
+                    <img src='images/trayectoria 3.png' style={{width:'auto', height:"85vh"}}></img>
                 </Grid>
-                <Grid item md={6} sx={{display:{xs:"none", md:"flex"}, justifyContent:"center"}}>
-                    <img src='images/Trayectoria 2.png' style={{width:'auto', height:"100vh"}}></img>
+                <Grid item md={6} xs={12} sx={{display:{xs:"none", md:"flex"}, justifyContent:"center"}}>
+                    <img src='images/trayectoria 3.png' style={{width:'auto', height:"90vh"}}></img>
                 </Grid>
                 <Grid item md={6} sx={{display:"flex", alignItems:"center", textAlign:{xs:"center", md:""}, px:3, pt:{xs:6, md:3}, bgcolor:"", fontFamily:"Quicksand", mb:{xs:2, md:0}}}>
                     <p style={{fontSize:"23px"}}>Mis logros incluyen múltiples victorias en campeonatos internacionales y nacionales de Microblading, entre ellos el 1er Lugar en el Campeonato Internacional de México. Soy Phibrows artista Royal Microblading y Subcampeona en Microblading en Colombia.
