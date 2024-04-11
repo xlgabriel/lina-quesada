@@ -9,7 +9,7 @@ const Trayectoria1 = () => {
     return (
         <Container sx={{ bgcolor: "", pt:2}}>
             <Grid container sx={{display:"flex", justifyContent:"space-around"}}>
-                <Grid item md={12} sx={{display:{xs:"flex", md:"none"}, justifyContent:"center"}}>
+                <Grid item md={12} sx={{display:{xs:"block", md:"none"}, justifyContent:"center", mr:2}}>
                     <img src='images/trayectoria 3.png' style={{width:'auto', height:"85vh"}}></img>
                 </Grid>
                 <Grid item md={6} xs={12} sx={{display:{xs:"none", md:"flex"}, justifyContent:"center"}}>
