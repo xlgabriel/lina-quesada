@@ -2,52 +2,51 @@ const courseCertification = [
     {
         title: "Nuestro Master Class",
         content:
-          "Una Formación a un alto nivel de aprendizaje para lograr seguridad y profesionalismo a la hora de desempeñar este maravilloso arte. Está diseñado de manera que todos puedan entenderlo, incluso aquellos sin conocimientos previos.",
-      },
-      {
+            "Formación a un alto nivel de aprendizaje para lograr seguridad y profesionalismo a la hora de desempeñar este maravilloso arte. Diseñado de manera que todos puedan entenderlo, incluso aquellos sin conocimientos previos.",
+    },
+    {
         title: "Nuestra certificación",
         content:
-          "Acorde a mis estudios realizados durante estos últimos años con las mejores academias y artistas a nivel mundial.",
-      },
-      {
+            "Acorde a mis estudios realizados durante estos últimos años con las mejores academias y artistas a nivel mundial.",
+    },
+    {
         title: "Procedimientos",
-        content:
-          "Somos expertos en realizar procedimientos de microblanding y micropigmentación en cejas y labios.",
-      },
-]
+        content: "Somos expertos en realizar procedimientos de microblanding y micropigmentación en cejas y labios.",
+    },
+];
 const studies = [
     {
-      title: "Phiacademy",
-      content: "Artista Royal",
-      logo: "images/logo-phiacademy.png"
+        title: "Phiacademy",
+        content: "Artista Royal",
+        logo: "images/logo-phiacademy.png",
     },
     {
         title: "Master Ana Oprea",
-        content: "Técnicas avanzadas en Hiperrealismo"
-      },
-      {
+        content: "Técnicas avanzadas en Hiperrealismo",
+    },
+    {
         title: "Academia Neide Sousa",
-        content: "Técnicas shadow Lux Lines"
-      },
-      {
+        content: "Técnicas shadow Lux Lines",
+    },
+    {
         title: "Academia Mariana Freitas",
-        content: "Técnica de Remoción"
-      },
-      {
+        content: "Técnica de Remoción",
+    },
+    {
         title: "Sviato Academy",
         content: "Técnicas de micropigmentacion. Cejas Magic shading. Labios aquarelle Lips. Delineado de ojos.",
-        logo:"images/logo-sviato.jpeg"
-      },
-      {
-        title:"Congreso PMU Nuance",
-        content:"PMU Nuance Colombia. Sub campeona. Técnica Microblading",
-        logo: "images/logo-pmu-nuance.png"
-      }
-  ];
+        logo: "images/logo-sviato.jpeg",
+    },
+    {
+        title: "Congreso PMU Nuance",
+        content: "PMU Nuance Colombia. Sub campeona. Técnica Microblading",
+        logo: "images/logo-pmu-nuance.png",
+    },
+];
 
-  export {courseCertification, studies};
+export { courseCertification, studies };
 
-  /*{
+/*{
       title: "Nuestro Master Class",
       content:
         "Una Formación a un alto nivel de aprendizaje para lograr seguridad y profesionalismo a la hora de desempeñar este maravilloso arte. está diseñado de manera que todos puedan entenderlo, incluso aquellos sin conocimientos previos.",
